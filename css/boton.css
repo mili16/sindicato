@@ -1,0 +1,60 @@
+.boton{
+    box-shadow: 8px -5px 4px 1px #899599;
+    background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+    background-color:#ededed;
+    border-radius:15px;
+    border:1px solid #d6bcd6;
+    display:inline-block;
+    cursor:pointer;
+    color:#3a8a9e;
+    font-family:Verdana;
+    font-size:17px;
+    font-weight:bold;
+    padding:7px 25px;
+    text-decoration:none;
+    text-shadow:-5px -50px 50px #e1e2ed;
+}
+.boton:hover {
+    background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+    background-color:#bab1ba;
+}
+.boton:active {
+    position:relative;
+    top:1px;
+}
+
+
+
+--------------------------------------
+
+
+.caja {
+   margin:20px auto 40px auto; 
+   height:30px;
+   width: 230px;
+   position:absolute;
+}
+
+select {
+   background: #FFFFFF;
+   border: none;
+   font-size: 14px;
+   height: 30px;
+   padding: 5px;
+   width: 250px;
+}
+select:focus{ outline: none;}
+
+.caja::after{
+    content:"\025be";
+    display:table-cell;
+    padding-top:7px;
+    text-align:center;
+    width:30px;
+    height:30px;
+    background-color:#d9d9d9;
+    position:absolute;
+    top:0;
+    right:0px;  
+    pointer-events: none;
+}
