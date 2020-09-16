@@ -83,7 +83,7 @@ body { padding: 1px;
 <!-- NAV -->
 <div class="mainmenu">
   <ul>
-    <li><i class="icon-home icon-large"></i>&nbsp;    <main>INICIO</main><a href="alumnos.php"><desc>HOME</desc></a></li>
+    <li><i class="icon-home icon-large"></i>&nbsp;    <main>INICIO</main><a href="#"><desc>HOME</desc></a></li>
     <li><i class="icon-comments icon-large"></i>&nbsp;<main> DIRECTIVA </main><desc>2019-2021</desc></li>
     <li><i class="icon-tint icon-large"></i>&nbsp;    <main>AFILIADOS</main><desc>GENERAL</desc></li>
     <li><i class="icon-comments icon-large"></i>&nbsp;<main>CURSOS</main><desc>MATRICULAS</desc></li>
