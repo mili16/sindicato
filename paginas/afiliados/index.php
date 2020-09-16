@@ -60,7 +60,7 @@ open('#','','top=300,left=300,width=300,height=300') ;
 <center> <h1>REGISTRO DE AFILIADOS</h1> </center>
 <hr>
 
-<a href="../../paginas/index.html" style="margin-right: 48%"><img src='../../img/volver.png' width='232' heigth='72' style="margin-right: 49%; margin-top: 9px" ></a> 
+<a href="../../paginas/index.php" style="margin-right: 48%"><img src='../../img/volver.png' width='232' heigth='72' style="margin-right: 49%; margin-top: 9px" ></a> 
 
 <!-- botones -->
 <div class="container">
