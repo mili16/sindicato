@@ -28,7 +28,7 @@ body { padding: 1px;
     background: #002244; 
     width: 100%;
      height: 51px; 
-     border: 1px solid #026; border-bottom: 3px solid #012; text-shadow: 0 1px 0 #000;}
+     border: 0px solid #026; border-bottom: 3px solid #012; text-shadow: 0 1px 0 #000;}
 
 .mainmenu ul  {margin: 0; padding: 0; }
 .mainmenu li i{ position: absolute; margin-left: -25px; margin-top: 6px; color: #012;  text-shadow: 0 1px 0 #036;}
