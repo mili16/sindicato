@@ -4,8 +4,6 @@
 
 <link rel="stylesheet" type="text/css" href="../../../../css/cursos.css">
 
-<link rel="stylesheet" href="../../../../css/inicio.css">
-
 <link rel="stylesheet" href="../../../../css/boton.css">
 
 
@@ -21,7 +19,7 @@ open('#','','top=300,left=300,width=300,height=300') ;
 
 <style>
 body{
-background-image: url(./../../../../img/fondoprincipal.jpg);
+background-image: url(../../../../img/mina.jpg);
  
   /* Fijar la imagen de fondo este vertical y
     horizontalmente y centrado */
@@ -62,23 +60,23 @@ section{
 
 
 
- <br><br><br>
+
 
     
-<?php
+    <?php
 // Datos de la base de datos
-	$usuario = "root";
-	$password = "";
-	$servidor = "localhost";
-	$basededatos = "sindicato";
-	
-	// creación de la conexión a la base de datos con mysql_connect()
-	$conexion = mysqli_connect( $servidor, $usuario, $password ) or die ("No se ha podido conectar al servidor de Base de datos");
-	
-	// Selección del a base de datos a utilizar
-	$db = mysqli_select_db( $conexion, $basededatos ) or die ( "Upps! Pues va a ser que no se ha podido conectar a la base de datos" );
-	// establecer y realizar consulta. guardamos en variable.
-	?>
+    $usuario = "root";
+    $password = "";
+    $servidor = "localhost";
+    $basededatos = "sindicato";
+    
+    // creación de la conexión a la base de datos con mysql_connect()
+    $conexion = mysqli_connect( $servidor, $usuario, $password ) or die ("No se ha podido conectar al servidor de Base de datos");
+    
+    // Selección del a base de datos a utilizar
+    $db = mysqli_select_db( $conexion, $basededatos ) or die ( "Upps! Pues va a ser que no se ha podido conectar a la base de datos" );
+    // establecer y realizar consulta. guardamos en variable.
+    ?>
 
 <section>
 <hr> 
@@ -88,7 +86,11 @@ section{
 <hr>
 </section>
 
-<a href="../index.html" style="margin-right: 48%"><img src='../../../../img/volver.png' width='232' heigth='72' style="margin-right: 49%; margin-top: 9px" ></a> 
+<div class="container"><div class="box">
+<a href="../index.html">
+Volver a Cursos
+</a>
+</div></div>
 
 	<form action = "" method="post">
         
@@ -167,7 +169,6 @@ ELIMINAR ALUMNO
     echo "<th>FAMILIAR</th>";
     echo "<th>CEL</th>";
     echo "<th>GRUPO</th>";
-    echo "<th></th>";
 
 	echo "</tr>";
 	$no=1;

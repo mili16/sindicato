@@ -4,7 +4,7 @@
 
 <link rel="stylesheet" type="text/css" href="../../../../css/cursos.css">
 
-<link rel="stylesheet" href="../../../../css/inicio.css">
+
 
 <link rel="stylesheet" href="../../../../css/boton.css">
 
@@ -20,8 +20,11 @@ open('#','','top=300,left=300,width=300,height=300') ;
 
 
 <style>
-body{
-background-image: url(./../../../../img/fondoprincipal.jpg);
+
+		body{
+	
+	/* Aquí el origen de la imagen */
+  background-image: url(../../../../img/mina.jpg);
  
   /* Fijar la imagen de fondo este vertical y
     horizontalmente y centrado */
@@ -38,7 +41,9 @@ background-image: url(./../../../../img/fondoprincipal.jpg);
  
   /* Damos un color de fondo mientras la imagen está cargando  */
   background-color: #464646;
+
 }
+
 section{
 	background: #fff ;
 	opacity: 0.5;
@@ -58,10 +63,6 @@ section{
 	
 <!-- NAV -->
 
-
-
-
-
  <br><br><br>
 
     
@@ -79,6 +80,7 @@ section{
 	$db = mysqli_select_db( $conexion, $basededatos ) or die ( "Upps! Pues va a ser que no se ha podido conectar a la base de datos" );
 	// establecer y realizar consulta. guardamos en variable.
 	?>
+
 
 <section>
 <hr> 

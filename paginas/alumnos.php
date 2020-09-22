@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="../css/boton.css">
 <link rel="stylesheet" type="text/css" href="../css/cursos.css">
 <link rel="stylesheet" href="../css/inicio.css">
+   
 <title>DIRECTIVA 2019</title> </head>
 <style>
 
@@ -17,7 +18,7 @@ html {
 }
 
 
-body { padding: 1px;
+body { padding: 0px;
  margin: 0px;   
 }
 
@@ -28,7 +29,7 @@ body { padding: 1px;
     background: #002244; 
     width: 100%;
      height: 51px; 
-     border: 1px solid #026; border-bottom: 3px solid #012; text-shadow: 0 1px 0 #000;}
+     border: 0px solid #026; border-bottom: 3px solid #012; text-shadow: 0 1px 0 #000;}
 
 .mainmenu ul  {margin: 0; padding: 0; }
 .mainmenu li i{ position: absolute; margin-left: -25px; margin-top: 6px; color: #012;  text-shadow: 0 1px 0 #036;}
@@ -97,14 +98,14 @@ CURSOS VACACIONALES - REGISTROS
 
 
 
-          <a href="cursos/deporte/index.html" class="boton" style="margin-left: 20%" ><img src='../img/pelota.jpg' style="border-radius: 50%;" width='100' heigth='100'>
+          <a href="cursos/deporte/index.html" class="boton" style="margin-left: 20%" "text-align: center;" ><img src='../img/pelota.jpg' style="border-radius: 50%;" width='100' heigth='100'> <br/>
             DEPORTE
             </a>
 
 
 
-         	<a href="cursos/reposteria/index.html" class="boton" style="margin-left: 20%" width='100' heigth='100'><img src='#' >
-            REPOSTERIA
+         	<a href="cursos/reposteria/index.html" class="boton" style="margin-left: 20%" "text-align: center;" width='100' heigth='100'><img src='../img/reposteria.png'  width='180' heigth='180'> <br/>
+            REPOSTERIA </a>
     
 
 
