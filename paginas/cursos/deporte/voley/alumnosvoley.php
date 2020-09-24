@@ -86,11 +86,11 @@ section{
 <hr>
 </section>
 
-<div class="container"><div class="box">
+
 <a href="../index.html">
 Volver a Cursos
 </a>
-</div></div>
+
 
 	<form action = "" method="post">
         
