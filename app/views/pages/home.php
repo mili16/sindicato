@@ -1,8 +1,8 @@
-<?php require_once __DIR__ . '/config.php'; ?>
-<?php require_once __DIR__ . '/views/include/head.php'; ?>
 
-<?php require_once __DIR__ . '/views/include/menu.php'; ?>
+<?php require_once __DIR__ . '/../include/menu.php'; ?>
+<?php
 
+?>
 <main class="main">
     <div class="main-banner">
 
@@ -22,4 +22,4 @@
     </div>
 </main>
 
-<?php require_once __DIR__ . '/views/include/footer.php'; ?>
+

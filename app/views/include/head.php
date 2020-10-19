@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/../../config/config.php'; ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,3 +11,20 @@
     <link rel="stylesheet/less" type="text/css" href="./assets/less/styles.less" />
 </head>
 <body>
+<?php
+
+if (isset($_GET['url'])) {
+    if (is_file(__DIR__ . '/../pages/' . $_GET['url'] . '.php')) {
+        require_once __DIR__ . '/../pages/' . $_GET['url'] . '.php';
+    } else {
+        require_once __DIR__ . '/../pages/404.php';
+    }
+} else {
+    require_once __DIR__ . '/../../index.php';
+}
+
+?>
+
+<script src="./assets/js/less.min.js"></script>
+</body>
+</html>
