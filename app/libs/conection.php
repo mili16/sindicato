@@ -1,5 +1,4 @@
 <?php
-// datos para la conexion a mysql
 
 define('DB_SERVER','localhost');
 define('DB_NAME','sindicato');
