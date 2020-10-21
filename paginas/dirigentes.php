@@ -18,8 +18,9 @@ html {
 }
 
 
-body { padding: 1px;
- margin: 1px;   
+body {
+ margin: 1px; 
+  padding: 1px;  
 }
 
 .mainmenu { 
@@ -99,23 +100,26 @@ body { padding: 1px;
 
 
 <div id="contenedor">
-<button target="popup" class="boton"><a href="dirigentes/form_nuevo_dirigente.php" 
-    onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;"><img src='../img/agregar.png' width='32' heigth='32'>
-    AGREGAR
-</a></button>
+    <button target="popup" class="boton"><a href="dirigentes/form_nuevo_dirigente.php" 
+        onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;">
+        <img src='../img/agregar.png' width='32' heigth='32'>
+        AGREGAR
+    </a></button>
 
 
 
 
-<button target="popup" class="boton"><a href="dirigentes/form_modificar_dirigente.php" 
-    onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;"><img src='../img/modificar.ico' width='32' heigth='32'>
-    MODIFICAR
-</a></button>
+    <button target="popup" class="boton"><a href="dirigentes/form_modificar_dirigente.php" 
+        onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;">
+        <img src='../img/modificar.ico' width='32' heigth='32'>
+        MODIFICAR
+    </a></button>
 
-<button target="popup" class="boton"><a href="dirigentes/form_eliminar_dirigente.php" 
-    onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;"><img src='../img/eliminar.png' width='32' heigth='32'>
-    ELIMINAR 
-</a></button>
+    <button target="popup" class="boton"><a href="dirigentes/form_eliminar_dirigente.php" 
+        onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;">
+        <img src='../img/eliminar.png' width='32' heigth='32'>
+        ELIMINAR 
+    </a></button>
 
 </div>
 
