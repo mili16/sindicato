@@ -10,8 +10,23 @@ define('APP', [
 ]);
 
 define('MENU_ITEMS', [
-    'home',
-    'cursos'
+    'Inicio',
+    'Directiva',
+    'General',
+    'Cursos',
+    'Reporte',
+    'Usuario',
+    'Salir'
+]);
+
+define('PAGES', [
+    'home' => 'Inicio',
+    'directive' => 'Directiva',
+    'general' => 'General',
+    'course' => 'Cursos',
+    'reporting' => 'Reporte',
+    'user' => 'Usuario',
+    'exit' => 'Salir'
 ]);
 
 define('DB', [
