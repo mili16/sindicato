@@ -22,65 +22,63 @@ function verificar_login($mysqli, $user, $password, &$result) {
     }
 }
 
-if(!isset($_SESSION['userid'])) {
-    if(isset($_POST['login'])) {
-        if(verificar_login($con, $_POST['user'], $_POST['password'], $result) == 1) {
+if (!isset($_SESSION['userid']) ) {
+    if (isset($_POST['login'])) {
+        if (verificar_login($con, $_POST['user'], $_POST['password'], $result) == 1) {
             $_SESSION['userid'] = $result->idusuario;
-            header("location:/home");
+            header("location:/inicio");
         } else {
             echo '<div class="error"> usuario y/o contraseña es incorrecto, vuelva a intentar.</div>';
         }
     }
+
 ?>
 
 <div class="login-container">
     <h1 class="title"><?= APP['name'] ?></h1>
     <img class="logo-img" src="<?= APP['logo'] ?>">
+    <hr>
+    <form action="" method="post" class="login">
+        <div class="login-content">
+            <img
+                src="<?= APP['logo'] ?>"
+                alt="Logo login"
+                class="logo-img"
+            >
+        </div>
+        <div class="login-content">
+            <input
+                name="user"
+                type="text"
+                placeholder="USUARIO"
+                class="login-input"
+            >
+        </div>
+        <div class="login-content">
+            <input
+                name="password"
+                type="password"
+                placeholder="CONTRASEÑA"
+                class="login-input"
+            >
+        </div>
+        <div class="login-content">
+            <input
+                name="login"
+                type="submit"
+                value="login"
+                class="login-button"
+            >
+        </div>
+    </form>
 </div>
-<hr>
-<form action="" method="post" class="login">
-    <div class="login-content">
-        <img
-            src="<?= APP['logo'] ?>"
-            alt="Logo login"
-            class="logo-img"
-        >
-    </div>
-    <div class="login-content">
-        <input
-            name="user"
-            type="text"
-            placeholder="USUARIO"
-            class="login-input"
-        >
-    </div>
-    <div class="login-content">
-        <input
-            name="password"
-            type="password"
-            placeholder="CONTRASEÑA"
-            class="login-input"
-        >
-    </div>
-    <div class="login-content">
-        <input
-            name="login"
-            type="submit"
-            value="login"
-            class="login-button"
-        >
-    </div>
-</form>
 
 <?php
 } else {
+        # code...
     echo '¿Desea salir del sistema?';
     echo '<a href="/libs/logout.php">Click aqui</a>';
 }
 ?>
-
-
-
-
 
 <?php require_once __DIR__ . '/views/include/footer.php'; ?>

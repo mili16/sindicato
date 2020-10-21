@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>LOGIN <?= APP['name'] ?></title>
-    <link rel="stylesheet/less" type="text/css" href="./assets/less/styles.less" />
+    <link rel="stylesheet/less" type="text/css" href="<?= __DIR__ . '/../..' ?>/assets/less/styles.less" />
 </head>
 <body>
 <?php
