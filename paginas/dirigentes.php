@@ -6,20 +6,20 @@
 <link rel="stylesheet" href="../css/boton.css">
 <link rel="stylesheet" type="text/css" href="../css/cursos.css">
 <link rel="stylesheet" href="../css/inicio.css">
-<link rel="stylesheet" href="../css/fonts/icomoon.eot">
+
 <title>DIRECTIVA 2019</title> </head>
 <style>
 
 html {
-    background-image: url(../img/mina.jpg);
+    background-image: url(../img/fondoceleste.jpg);
     background-size: cover;
     background-attachment: fixed;
 
 }
 
 
-body { padding: 0px;
- margin: 0px;   
+body { padding: 1px;
+ margin: 1px;   
 }
 
 .mainmenu { 
@@ -81,13 +81,13 @@ body { padding: 0px;
                     <!-- NAV -->
     <div class="mainmenu">
         <ul>
-            <li><i class="icon-home icon-large">    </i>&nbsp;<main>HOME      </main><a href="../index.php"><desc>Sitracond</desc></a></li>
-            <li><i class="icon-comments icon-large"></i>&nbsp;<main>DIRECTIVA </main><a href="dirigentes.php"><desc>2019-2021</desc></a></li>
-            <li><i class="icon-tint icon-large">    </i>&nbsp;<main>AFILIADOS </main><a href="afiliados/index.php"><desc>GENERAL</desc></a></li>
-            <li><i class="icon-comments icon-large"></i>&nbsp;<main>CURSOS    </main><a href="alumnos.php"><desc>MATRICULAS</desc></a></li>
-            <li><i class="icon-comments icon-large"></i>&nbsp;<main>REPORTE   </main><desc>GENERAL</desc></li>
-            <li><i class="icon-tint icon-large">    </i>&nbsp;<main>[MILAGROS]</main><desc>SESION ACTIVA</desc></li>
-            <li><i class="icon-home icon-large">    </i>&nbsp;<main>SALIR     </main><a href="../logout.php"><desc>Cerrar Sesion</desc></a></li>
+            <li>&nbsp;<main>HOME      </main><a href="../index.php"><desc>Sitracond</desc></a></li>
+            <li>&nbsp;<main>DIRECTIVA </main><a href="dirigentes.php"><desc>2019-2021</desc></a></li>
+            <li>&nbsp;<main>AFILIADOS </main><a href="afiliados/index.php"><desc>GENERAL</desc></a></li>
+            <li>&nbsp;<main>CURSOS    </main><a href="alumnos.php"><desc>MATRICULAS</desc></a></li>
+            <li>&nbsp;<main>REPORTE   </main><desc>GENERAL</desc></li>
+            <li>&nbsp;<main>[MILAGROS]</main><desc>SESION ACTIVA</desc></li>
+            <li>&nbsp;<main>SALIR     </main><a href="../logout.php"><desc>Cerrar Sesion</desc></a></li>
         </ul>
     </div>
 
@@ -108,13 +108,13 @@ body { padding: 0px;
 
 
 <button target="popup" class="boton"><a href="dirigentes/form_modificar_dirigente.php" 
-    onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;"><img src='../img/agregar.png' width='32' heigth='32'>
+    onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;"><img src='../img/modificar.ico' width='32' heigth='32'>
     MODIFICAR
 </a></button>
 
 <button target="popup" class="boton"><a href="dirigentes/form_eliminar_dirigente.php" 
-    onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;"><img src='../img/agregar.png' width='32' heigth='32'>
-    ELIMINAR "&#xe902;"
+    onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;"><img src='../img/eliminar.png' width='32' heigth='32'>
+    ELIMINAR 
 </a></button>
 
 </div>
