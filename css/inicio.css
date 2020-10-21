@@ -1,0 +1,108 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+html {
+    background-image: url(../img/mina.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+header img{
+    margin: 1%;
+    width: 70px;
+    height: 60px;
+    float: left; 
+    display: block;  
+
+}
+header{
+    width: 100%;
+    background: black;
+    opacity: 0.9;
+}
+header ul{
+
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+header ul li{
+    list-style: none;
+    position: relative;
+    padding: 10px 0;
+    transition: 0.5s;
+    box-sizing: border-box;
+    border-right: 1px solid;
+    background: black;
+    opacity: 0.9;
+}
+
+header ul li:hover{
+    background: #2196f3;
+  font-size: 23px;
+}
+header ul li:last-child{
+    border-right: none;
+}
+
+header ul li a{
+text-decoration: none;
+padding: 0 20px;
+color: #fff; 
+}
+
+header ul li ul{
+    position: absolute;
+    top:44px;
+    left: 0;
+    background: #000;
+    display: block;
+    width: 200px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+header ul li:hover ul{
+    opacity: 1;
+    visibility: visible;
+}
+header ul li ul li{
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,.2); 
+}
+
+@media(max-width: 768px)
+{
+
+    header ul{
+        display: block;
+    }
+    header ul li{
+        display: block;
+    }
+    header ul li ul{
+        width: 100%;
+        z-index: 1;
+    }
+}
+
+
+h1{
+    margin-top:10%;
+    text-align: center;
+    font-family: sans-serif;
+    color: white; text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+
