@@ -4,8 +4,6 @@
 
 <link rel="stylesheet" type="text/css" href="../../../../css/cursos.css">
 
-
-
 <link rel="stylesheet" href="../../../../css/boton.css">
 
 

@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+<head> 
 
-<head>
-	<meta charset="UTF-8">
-	<title>SITRACOND</title>
-</head>
+<meta charset="utf-8">
 
+<link rel="stylesheet" href="../css/boton.css">
+<link rel="stylesheet" type="text/css" href="../css/cursos.css">
+<link rel="stylesheet" href="../css/inicio.css">
+   
+<title>DIRECTIVA 2019</title> </head>
 <style>
 
 html {
@@ -16,7 +18,7 @@ html {
 }
 
 
-body { padding: 1px;
+body { padding: 0px;
  margin: 0px;   
 }
 
@@ -60,48 +62,51 @@ body { padding: 1px;
     display:block;}
 }
 </style>
-
-
+</head>
 <body> 
 	
-    <?php
-// Datos de la base de datos
-    $usuario = "root";
-    $password = "";
-    $servidor = "localhost";
-    $basededatos = "sindicato";
-    
-    // creación de la conexión a la base de datos con mysql_connect()
-    $conexion = mysqli_connect( $servidor, $usuario, $password ) or die ("No se ha podido conectar al servidor de Base de datos");
-    
-    // Selección del a base de datos a utilizar
-    $db = mysqli_select_db( $conexion, $basededatos ) or die ( "Upps! Pues va a ser que no se ha podido conectar a la base de datos" );
-    // establecer y realizar consulta. guardamos en variable.
-    ?>
-
 <!-- NAV -->
+
+
+
 <div class="mainmenu">
   <ul>
-    <li><i class="icon-home icon-large"></i>&nbsp;    <main>INICIO</main><a href="#"><desc>HOME</desc></a></li>
-    <li><i class="icon-comments icon-large"></i>&nbsp;<main> DIRECTIVA </main><desc>2019-2021</desc></li>
-    <li><i class="icon-tint icon-large"></i>&nbsp;    <main>AFILIADOS</main><a href="afiliados/index.php"><desc>GENERAL</desc></a></li>
-    <li><i class="icon-comments icon-large"></i>&nbsp;<main>CURSOS</main><a href="alumnos.php"><desc>MATRICULAS</desc></a></li>
+    <li><i class="icon-home icon-large"></i>&nbsp;<main>INICIO</main><desc>HOME</desc></li>
+    <li><i class="icon-comments icon-large"></i>&nbsp;<main>DIRECTIVA</main><desc>2019-2021</desc></li>
+    <li><i class="icon-tint icon-large"></i>&nbsp;<main>AFILIADOS</main><desc>GENERAL</desc></li>
+    <li><i class="icon-comments icon-large"></i>&nbsp;<main>CURSOS</main><desc>MATRICULAS</desc></li>
     <li><i class="icon-comments icon-large"></i>&nbsp;<main>REPORTE</main><desc>GENERAL</desc></li>
-    <li><i class="icon-tint icon-large"></i>&nbsp;    <main>[MILAGROS]</main><desc>SESION ACTIVA</desc></li>
-    <li><i class="icon-home icon-large"></i>&nbsp;   <main>SALIR</main><a href="../logout.php"><desc>Cerrar Sesion</desc></a></li>
+    <li><i class="icon-tint icon-large"></i>&nbsp;<main>[MILAGROS]</main><desc>SESION ACTIVA</desc></li>
+    <li><i class="icon-home icon-large"></i>&nbsp;<main>SALIR</main><desc>CERRAR SESION</desc></li>
   </ul>
 </div>
 
 
 
-<h1>SISTEMA DE REGISTROS PARA LA ORGANIZACION DE SINDICATO DE TRABAJADORES MINEROS DE LA COMPAÑIA MINERA CONDESTABLE S.A<br>
-BIENVENIDO
-</h1> 
-
-<img id="inicio" src="../img/logo2.jpeg">
 
 
+<hr>
+ <h1>   
 
+
+
+CURSOS VACACIONALES - REGISTROS 
+</h1>
+<hr>
+
+
+
+
+
+          <a href="cursos/deporte/index.html" class="boton" style="margin-left: 20%" "text-align: center;" ><img src='../img/pelota.jpg' style="border-radius: 50%;" width='100' heigth='100'> <br/>
+            DEPORTE
+            </a>
+
+
+
+         	<a href="cursos/reposteria/index.html" class="boton" style="margin-left: 20%" "text-align: center;" width='100' heigth='100'><img src='../img/reposteria.png'  width='180' heigth='180'> <br/>
+            REPOSTERIA </a>
+    
 
 
 </body>

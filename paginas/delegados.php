@@ -64,7 +64,7 @@ body { padding: 1px;
 
 
 <body> 
-	
+    
     <?php
 // Datos de la base de datos
     $usuario = "root";
@@ -94,73 +94,75 @@ body { padding: 1px;
 </div>
 
 
-	<center> <h2>DIRIGENTES 2019-2021</h2> </center>
+
+	<center> <h2>DELEGADOS 2019-2021</h2> </center>
     <hr>
 
 
 
-<div class="container">
 
-<div class="box">
      <!-- NUEVO HORARIO BOTON -->
-<a href="dirigentes/form_nuevo_dirigente.php" target="popup" class="boton" style="margin-left: 70%" 
+<a href="delegados/form_nuevo_delegado.php" target="popup" class="boton" style="margin-left: 70%" 
 onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;"><img src='../img/agregar.png' width='32' heigth='32'>
 AGREGAR
 </a>
 <!-- FIN NUEVO HORARIO -->
-</div>
+
 <!-- ------------------------------------------ -->
-<div class="box">
+
 <!-- MODIFICAR HORARIO BOTON -->
-<a href="dirigentes/form_modificar_dirigente.php" target="popup" class="boton" style="margin-left: 70%" 
+<a href="delegados/form_modificar_delegado.php" target="popup" class="boton" style="margin-left: 70%" 
 onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;"><img src='../img/modificar.ico' width='32' heigth='32'>
 MODIFICAR 
 </a>
-</div>
 
-<div class="box">
+
 <!-- ELIMINAR HORARIO BOTON -->
-<a href="dirigentes/form_eliminar_dirigente.php" target="popup" class="boton" style="margin-left: 70%" 
+<a href="delegados/form_eliminar_delegado.php" target="popup" class="boton" style="margin-left: 70%" 
 onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=300px'); return false;"><img src='../img/eliminar.png' width='32' heigth='32'>
 ELIMINAR 
 </a>
-</div>
-</div>
+
+
 <br>
-	<form action = "dirigentes.php" method="post">
+	<form action = "delegados.php" method="post">
         
         <!--Cargar datos de las categorias -->
         <?php
-        $sql = "Select * from dirigentes";
+        $sql = "Select * from delegados";
         $resultado = mysqli_query( $conexion, $sql ) or die ( "Algo ha ido mal en la consulta a la base de datos");
 	
         ?>
 
-<!-- casilla -->
 
-        <select name="dirigentes" >
-        <option value="a"  >--Mostrar Dirigentes--</option>
+       
+
+
+
+<!-- casilla -->
+       
+        <select name="delegados" >
+        <option value="a"  >--Mostrar Delegados--</option>
        <?php
-        while ($row = mysqli_fetch_array($resultado))
+        while ($row = mysqli_fetch_array( $resultado ))
 	{
 		
-		echo "<option value=\"".$row['nom_dirigente']."\">".$row['nom_dirigente']."</option>"; 
+		echo "<option value=\"".$row['area_delegado']."\">".$row['area_delegado']."</option>"; // aquí te faltaba el value... lo mismo, ojo con las comillas 
 	}
         ?>
         </select>
- 
-<!-- fin casilla -->
+   
+        <!-- fin casilla -->
 
-
-    <input type="submit" name ="enviar" class="boton" value="Mostrar datos">
+    <input type="submit" name ="MOSTRAR" class="boton" value="Mostrar datos">
 	</form>
 	<?php
-	if (isset($_POST["dirigentes"]) && $_POST["dirigentes"]!="a")    {
-    $nom_dirigente= $_POST["dirigentes"];    
-    $consulta = "SELECT * FROM dirigentes where nom_dirigente='".$nom_dirigente."'";
+	if (isset($_POST["delegados"]) && $_POST["delegados"]!="a")    {
+    $area_delegado= $_POST["delegados"];    
+    $consulta = "SELECT * FROM delegados where area_delegado='".$area_delegado."'";
     }else{
         
-        $consulta = "SELECT * FROM dirigentes";
+        $consulta = "SELECT * FROM delegados";
     }
     
 	$resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
@@ -172,8 +174,9 @@ ELIMINAR
 	echo "<th>CODIGO</th>";
 	echo "<th>NOMBRE</th>";
 	echo "<th>APELLIDO</th>";
+    echo "<th>GUARDIA</th>";
+    echo "<th>AREA</th>";
     echo "<th>DNI</th>";
-    echo "<th>CARGO</th>";
     echo "<th>CELULAR</th>";
 
 	echo "</tr>";
@@ -182,12 +185,13 @@ ELIMINAR
 	while ($columna = mysqli_fetch_array( $resultado ))
 	{
 		echo "<tr>";
-		echo "<td>" . $columna['id_dirigente'] . "</td>";
-		echo "<td>" . $columna['nom_dirigente'] . "</td>";
-		echo "<td>" . $columna['ape_dirigente'] . "</td>";
-        echo "<td>" . $columna['dni_dirigente'] . "</td>";
-        echo "<td>" . $columna['cargo_dirigente'] . "</td>";
-        echo "<td>" . $columna['cel_dirigente'] . "</td>";
+		echo "<td>" . $columna['id_delegado'] . "</td>";
+		echo "<td>" . $columna['nom_delegado'] . "</td>";
+		echo "<td>" . $columna['ape_delegado'] . "</td>";
+        echo "<td>" . $columna['guardia_delegado'] . "</td>";
+        echo "<td>" . $columna['area_delegado'] . "</td>";
+        echo "<td>" . $columna['dni_delegado'] . "</td>";
+        echo "<td>" . $columna['cel_delegado'] . "</td>";
 		echo "</tr>";
         $no++;
 	}

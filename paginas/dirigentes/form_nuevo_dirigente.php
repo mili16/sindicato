@@ -42,8 +42,8 @@ $celular = $_POST ['celular'];
 if(empty($nombre) or empty($apellido) or empty($dni) or empty($cargo) or empty($celular)){
 	echo "LLENE TODOS LOS CAMPOS";
 }else{
-	mysqli_select_db($DB_SERVER,$con) or die ("ERROR AL CONECTAR A LA BASE DE DATOS");
-	mysqli_query("INSERT INTO dirigentes (id_dirigente,nom_dirigente, ape_dirigente, dni_dirigente, cargo_dirigente, cel_dirigente) VALUES ('$id','$nombre','$apellido','$dni','$cargo','$celular')");
+	mysql_select_db($db,$conexion) or die ("ERROR AL CONECTAR A LA BASE DE DATOS");
+	mysql_query("INSERT INTO dirigentes (id_dirigente,nom_dirigente, ape_dirigente, dni_dirigente, cargo_dirigente, cel_dirigente) VALUES ('$id','$nombre','$apellido','$dni','$cargo','$celular')");
 	echo "INGRESADO CORRECTAMENTE";
 }
 

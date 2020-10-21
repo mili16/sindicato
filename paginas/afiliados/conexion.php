@@ -6,6 +6,6 @@
 	$db="sindicato";
 	
 	// creación de la conexión a la base de datos con mysql_connect()
-	$conexion = mysql_connect($server,$user,$contrasena) or die ("error al conectar la base de datos");
+	$conexion = mysqli_connect($server,$user,$contrasena,$db) or die ("error al conectar la base de datos");
 
 	 ?>

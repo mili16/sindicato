@@ -4,6 +4,8 @@
 
 <link rel="stylesheet" type="text/css" href="../../../../css/cursos.css">
 
+<link rel="stylesheet" href="../../../../css/inicio.css">
+
 <link rel="stylesheet" href="../../../../css/boton.css">
 
 
@@ -19,7 +21,7 @@ open('#','','top=300,left=300,width=300,height=300') ;
 
 <style>
 body{
-background-image: url(../../../../img/mina.jpg);
+background-image: url(./../../../../img/fondoprincipal.jpg);
  
   /* Fijar la imagen de fondo este vertical y
     horizontalmente y centrado */
@@ -60,39 +62,35 @@ section{
 
 
 
-
+ <br><br><br>
 
     
-    <?php
+<?php
 // Datos de la base de datos
-    $usuario = "root";
-    $password = "";
-    $servidor = "localhost";
-    $basededatos = "sindicato";
-    
-    // creación de la conexión a la base de datos con mysql_connect()
-    $conexion = mysqli_connect( $servidor, $usuario, $password ) or die ("No se ha podido conectar al servidor de Base de datos");
-    
-    // Selección del a base de datos a utilizar
-    $db = mysqli_select_db( $conexion, $basededatos ) or die ( "Upps! Pues va a ser que no se ha podido conectar a la base de datos" );
-    // establecer y realizar consulta. guardamos en variable.
-    ?>
+	$usuario = "root";
+	$password = "";
+	$servidor = "localhost";
+	$basededatos = "sindicato";
+	
+	// creación de la conexión a la base de datos con mysql_connect()
+	$conexion = mysqli_connect( $servidor, $usuario, $password ) or die ("No se ha podido conectar al servidor de Base de datos");
+	
+	// Selección del a base de datos a utilizar
+	$db = mysqli_select_db( $conexion, $basededatos ) or die ( "Upps! Pues va a ser que no se ha podido conectar a la base de datos" );
+	// establecer y realizar consulta. guardamos en variable.
+	?>
 
 <section>
 <hr> 
-<center> <h2>TALLER VERANO | VOLEY</h2> 
-         <h3>JUEVES 06:00 PM  -  10:00 PM </h3>
+<center> <h2>REPOSTERIA - GRUPO N°3 </h2> 
+         <h3>Sabado 02:00 PM  -  6:00 PM </h3>
 </center>
 <hr>
 </section>
 
+<a href="../index.html" style="margin-right: 48%"><img src='../../../../img/volver.png' width='232' heigth='72' style="margin-right: 49%; margin-top: 9px" ></a> 
 
-<a href="../index.html">
-Volver a Cursos
-</a>
-
-
-	<form action = "" method="post">
+	<form action = "computacion.php" method="post">
         
         <!--Cargar datos de las categorias -->
         <?php
@@ -110,7 +108,9 @@ onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 
 NUEVO ALUMNO
 </a>
 </div>
+<!-- FIN NUEVO alumno -->
 
+<!-- ------------------------------------------ -->
 <div class="box">
 	
 
@@ -121,8 +121,7 @@ MODIFICAR ALUMNO
 </a>
 <!-- FIN alumno  -->
 </div>
-
-
+<!-- ------------------------------------------ -->
 <div class="box">
 
 <!-- ELIMINAR alumno BOTON -->
@@ -151,7 +150,7 @@ ELIMINAR ALUMNO
                              familiar_alum,
                              cel_alum,
                              nom_curso, 
-                             grupo_alum FROM alumnos  WHERE nom_curso = 'REPOSTERIA' AND grupo_alum='GRUPO1'";
+                             grupo_alum FROM alumnos  WHERE nom_curso = 'REPOSTERIA' AND grupo_alum='GRUPO3'";
     }
     
 	$resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
@@ -173,13 +172,9 @@ ELIMINAR ALUMNO
 	echo "</tr>";
 	$no=1;
 	// Bucle while que recorre cada registro y muestra cada campo en la tabla.
-	while ($columna = mysqli_fetch_array( $resultado ) )
-	
+	while ($columna = mysqli_fetch_array( $resultado ))
 	{
-		
-	$id_alum=$columna['id_alum'];
 		echo "<tr>";
-
 		echo "<td>" . $columna['id_alum'] . "</td>";
 		echo "<td>" . $columna['ape_afiliado'] . "</td>";
 		echo "<td>" . $columna['nom_afiliado'] . "</td>";
@@ -189,11 +184,11 @@ ELIMINAR ALUMNO
         echo "<td>" . $columna['familiar_alum'] . "</td>";
         echo "<td>" . $columna['cel_alum'] . "</td>";
         echo "<td>" . $columna['grupo_alum'] . "</td>";
-
-        echo "</tr>";
-         $no++; 
-     }	
-	    echo "</table>"; // Fin de la tabla
+		echo "</tr>";
+        $no++;
+	}
+	
+	echo "</table>"; // Fin de la tabla
 	// cerrar conexión de base de datos
 	mysqli_close( $conexion );
     
