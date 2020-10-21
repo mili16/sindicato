@@ -1,11 +1,9 @@
-<?php 
-	// Datos de la base de datos
-	$server = "localhost";
-	$user = "root";
-	$contrasena="";
-	$db="sindicato";
-	
-	// creación de la conexión a la base de datos con mysql_connect()
-	$conexion = mysql_connect($server,$user,$contrasena) or die ("error al conectar la base de datos");
+<?php
+// datos para la conexion a mysql
 
-	 ?>
+define('DB_SERVER','localhost');
+define('DB_NAME','sindicato');
+define('DB_USER','root');
+define('DB_PASS','');
+$con = mysqli_connect(DB_SERVER,DB_USER, DB_PASS, DB_NAME);
+?>
