@@ -16,7 +16,7 @@ html {
 }
 
 
-body { padding: 1px;
+body { padding: 0px;
  margin: 0px;   
 }
 
@@ -83,7 +83,7 @@ body { padding: 1px;
 <div class="mainmenu">
   <ul>
     <li><i class="icon-home icon-large"></i>&nbsp;    <main>INICIO</main><a href="#"><desc>HOME</desc></a></li>
-    <li><i class="icon-comments icon-large"></i>&nbsp;<main> DIRECTIVA </main><desc>2019-2021</desc></li>
+    <li><i class="icon-comments icon-large"></i>&nbsp;<main> DIRECTIVA </main><a href="dirigentes.php"><desc>2019-2021</desc></a></li>
     <li><i class="icon-tint icon-large"></i>&nbsp;    <main>AFILIADOS</main><a href="afiliados/index.php"><desc>GENERAL</desc></a></li>
     <li><i class="icon-comments icon-large"></i>&nbsp;<main>CURSOS</main><a href="alumnos.php"><desc>MATRICULAS</desc></a></li>
     <li><i class="icon-comments icon-large"></i>&nbsp;<main>REPORTE</main><desc>GENERAL</desc></li>

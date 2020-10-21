@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="../css/boton.css">
 <link rel="stylesheet" type="text/css" href="../css/cursos.css">
 <link rel="stylesheet" href="../css/inicio.css">
+<link rel="stylesheet" href="../css/fonts/icomoon.eot">
 <title>DIRECTIVA 2019</title> </head>
 <style>
 
@@ -17,7 +18,7 @@ html {
 }
 
 
-body { padding: 1px;
+body { padding: 0px;
  margin: 0px;   
 }
 
@@ -26,9 +27,9 @@ body { padding: 1px;
     font-size: 16px; 
     font-family: 'Cuprum', Georgia, "Times New Roman", Times, Serif; 
     background: #002244; 
-    width: 100%;
+    width: 99.9%;
      height: 51px; 
-     border: 1px solid #026; border-bottom: 3px solid #012; text-shadow: 0 1px 0 #000;}
+     border: 0px solid #026; border-bottom: 3px solid #012; text-shadow: 0 1px 0 #000;}
 
 .mainmenu ul  {margin: 0; padding: 0; }
 .mainmenu li i{ position: absolute; margin-left: -25px; margin-top: 6px; color: #012;  text-shadow: 0 1px 0 #036;}
@@ -55,11 +56,7 @@ body { padding: 1px;
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;}
-#inicio{
-    width: 500px;
-    margin:8px auto;
-    display:block;}
-}
+
 </style>
 
 
@@ -81,52 +78,51 @@ body { padding: 1px;
     ?>
 
 <!-- NAV -->
-<div class="mainmenu">
-  <ul>
-    <li><i class="icon-home icon-large"></i>&nbsp;<main>INICIO</main><desc>HOME</desc></li>
-    <li><i class="icon-comments icon-large"></i>&nbsp;<main>DIRECTIVA</main><desc>2019-2021</desc></li>
-    <li><i class="icon-tint icon-large"></i>&nbsp;<main>AFILIADOS</main><desc>GENERAL</desc></li>
-    <li><i class="icon-comments icon-large"></i>&nbsp;<main>CURSOS</main><desc>MATRICULAS</desc></li>
-    <li><i class="icon-comments icon-large"></i>&nbsp;<main>REPORTE</main><desc>GENERAL</desc></li>
-    <li><i class="icon-tint icon-large"></i>&nbsp;<main>[MILAGROS]</main><desc>SESION ACTIVA</desc></li>
-    <li><i class="icon-home icon-large"></i>&nbsp;<main>SALIR</main><desc>CERRAR SESION</desc></li>
-  </ul>
-</div>
-
+                    <!-- NAV -->
+    <div class="mainmenu">
+        <ul>
+            <li><i class="icon-home icon-large">    </i>&nbsp;<main>HOME      </main><a href="../index.php"><desc>Sitracond</desc></a></li>
+            <li><i class="icon-comments icon-large"></i>&nbsp;<main>DIRECTIVA </main><a href="dirigentes.php"><desc>2019-2021</desc></a></li>
+            <li><i class="icon-tint icon-large">    </i>&nbsp;<main>AFILIADOS </main><a href="afiliados/index.php"><desc>GENERAL</desc></a></li>
+            <li><i class="icon-comments icon-large"></i>&nbsp;<main>CURSOS    </main><a href="alumnos.php"><desc>MATRICULAS</desc></a></li>
+            <li><i class="icon-comments icon-large"></i>&nbsp;<main>REPORTE   </main><desc>GENERAL</desc></li>
+            <li><i class="icon-tint icon-large">    </i>&nbsp;<main>[MILAGROS]</main><desc>SESION ACTIVA</desc></li>
+            <li><i class="icon-home icon-large">    </i>&nbsp;<main>SALIR     </main><a href="../logout.php"><desc>Cerrar Sesion</desc></a></li>
+        </ul>
+    </div>
 
 	<center> <h2>DIRIGENTES 2019-2021</h2> </center>
     <hr>
 
 
-
-<div class="container">
-
-<div class="box">
-     <!-- NUEVO HORARIO BOTON -->
-<a href="dirigentes/form_nuevo_dirigente.php" target="popup" class="boton" style="margin-left: 70%" 
-onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;"><img src='../img/agregar.png' width='32' heigth='32'>
-AGREGAR
-</a>
-<!-- FIN NUEVO HORARIO -->
-</div>
-<!-- ------------------------------------------ -->
-<div class="box">
-<!-- MODIFICAR HORARIO BOTON -->
-<a href="dirigentes/form_modificar_dirigente.php" target="popup" class="boton" style="margin-left: 70%" 
-onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;"><img src='../img/modificar.ico' width='32' heigth='32'>
-MODIFICAR 
-</a>
-</div>
-
-<div class="box">
-<!-- ELIMINAR HORARIO BOTON -->
-<a href="dirigentes/form_eliminar_dirigente.php" target="popup" class="boton" style="margin-left: 70%" 
-onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=300px'); return false;"><img src='../img/eliminar.png' width='32' heigth='32'>
-ELIMINAR 
-</a>
-</div>
-</div>
 <br>
+
+
+<div id="contenedor">
+<button target="popup" class="boton"><a href="dirigentes/form_nuevo_dirigente.php" 
+    onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;"><img src='../img/agregar.png' width='32' heigth='32'>
+    AGREGAR
+</a></button>
+
+
+
+
+<button target="popup" class="boton"><a href="dirigentes/form_modificar_dirigente.php" 
+    onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;"><img src='../img/agregar.png' width='32' heigth='32'>
+    MODIFICAR
+</a></button>
+
+<button target="popup" class="boton"><a href="dirigentes/form_eliminar_dirigente.php" 
+    onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;"><img src='../img/agregar.png' width='32' heigth='32'>
+    ELIMINAR "&#xe902;"
+</a></button>
+
+</div>
+
+
+
+
+
 	<form action = "dirigentes.php" method="post">
         
         <!--Cargar datos de las categorias -->
