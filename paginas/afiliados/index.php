@@ -20,7 +20,7 @@ html {
 
 body { 
      margin: 1px;
-    padding: 2px;
+    padding: 2px 2px 2px 2px;
    
 }
 
@@ -91,24 +91,22 @@ body {
                     <!-- NAV -->
     <div class="mainmenu">
         <ul>
-            <li>&nbsp;<main>HOME      </main><a href="../index.php"><desc>Sitracond</desc></a></li>
-            <li>&nbsp;<main>DIRECTIVA </main><a href="dirigentes.php"><desc>2019-2021</desc></a></li>
-            <li>&nbsp;<main>AFILIADOS </main><a href="afiliados/index.php"><desc>GENERAL</desc></a></li>
-            <li>&nbsp;<main>CURSOS    </main><a href="alumnos.php"><desc>MATRICULAS</desc></a></li>
+            <li>&nbsp;<main>HOME      </main><a href="../../index.php"><desc>Sitracond</desc></a></li>
+            <li>&nbsp;<main>DIRECTIVA </main><a href="../dirigentes.php"><desc>2019-2021</desc></a></li>
+            <li>&nbsp;<main>AFILIADOS </main><a href="../afiliados/index.php"><desc>GENERAL</desc></a></li>
+            <li>&nbsp;<main>CURSOS    </main><a href="../alumnos.php"><desc>MATRICULAS</desc></a></li>
             <li>&nbsp;<main>REPORTE   </main><desc>GENERAL</desc></li>
             <li>&nbsp;<main>[MILAGROS]</main><desc>SESION ACTIVA</desc></li>
-            <li>&nbsp;<main>SALIR     </main><a href="../logout.php"><desc>Cerrar Sesion</desc></a></li>
+            <li>&nbsp;<main>SALIR     </main><a href="../../logout.php"><desc>Cerrar Sesion</desc></a></li>
         </ul>
     </div>
 
-   <center> <h2>REGISTRO DE AFILIADOS</h2> </center>
+   <center> <h1>REGISTRO DE AFILIADOS</h1> </center>
     <hr>
 
 
 <br>
 
-
-<a href="../../paginas/index.php" style="margin-right: 48%"><img src='../../img/volver.png' width='150' heigth='72' style="margin-right: 49%; margin-top: 9px" ></a> 
 
 <!-- botones -->
 
@@ -116,19 +114,19 @@ body {
     <button target="popup" class="boton"><a href="#" 
         onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;">
         <img src='../../img/agregar.png' width='32' heigth='32'>
-        AGREGAR 
+        AGREGAR AFILIADOS
     </a></button>
 
     <button target="popup" class="boton"><a href="#" 
         onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;">
         <img src='../../img/modificar.ico' width='32' heigth='32'>
-        DATOS AFILIADOS
+        MODIFICAR AFILIADOS
     </a></button>
 
     <button target="popup" class="boton"><a href="#" 
         onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;">
         <img src='../../img/eliminar.png' width='32' heigth='32'>
-        ELIMINAR 
+        ELIMINAR AFILIADOS
     </a></button>
 
 </div>

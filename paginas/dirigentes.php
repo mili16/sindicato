@@ -82,7 +82,7 @@ body {
                     <!-- NAV -->
     <div class="mainmenu">
         <ul>
-            <li>&nbsp;<main>HOME      </main><a href="../index.php"><desc>Sitracond</desc></a></li>
+            <li>&nbsp;<main>HOME      </main><a href="index.php"><desc>Sitracond</desc></a></li>
             <li>&nbsp;<main>DIRECTIVA </main><a href="dirigentes.php"><desc>2019-2021</desc></a></li>
             <li>&nbsp;<main>AFILIADOS </main><a href="afiliados/index.php"><desc>GENERAL</desc></a></li>
             <li>&nbsp;<main>CURSOS    </main><a href="alumnos.php"><desc>MATRICULAS</desc></a></li>
@@ -92,7 +92,7 @@ body {
         </ul>
     </div>
 
-	<center> <h2>DIRIGENTES 2019-2021</h2> </center>
+	<center> <h1>DIRIGENTES 2019-2021</h1> </center>
     <hr>
 
 
@@ -106,7 +106,7 @@ body {
         AGREGAR
     </a></button>
 
-
+ &nbsp
 
 
     <button target="popup" class="boton"><a href="dirigentes/form_modificar_dirigente.php" 
@@ -114,7 +114,7 @@ body {
         <img src='../img/modificar.ico' width='32' heigth='32'>
         MODIFICAR
     </a></button>
-
+ &nbsp
     <button target="popup" class="boton"><a href="dirigentes/form_eliminar_dirigente.php" 
         onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;">
         <img src='../img/eliminar.png' width='32' heigth='32'>
