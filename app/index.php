@@ -75,7 +75,6 @@ if (!isset($_SESSION['userid']) ) {
 
 <?php
 } else {
-        # code...
     echo '¿Desea salir del sistema?';
     echo '<a href="/libs/logout.php">Click aqui</a>';
 }
