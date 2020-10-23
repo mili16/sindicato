@@ -3,7 +3,8 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>SITRACOND</title>
+	<link rel="stylesheet" href="../css/inicio.css">
+    <title>SITRACOND</title>
 </head>
 
 <style>
@@ -16,9 +17,6 @@ html {
 }
 
 
-body { padding: 0px;
- margin: 0px;   
-}
 
 .mainmenu { 
     color: #ccc; 
@@ -54,10 +52,12 @@ body { padding: 0px;
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;}
-#inicio{
+#imagen{
     width: 500px;
     margin:8px auto;
-    display:block;}
+    align-items: center;
+  display: flex;
+  justify-content: center;}
 }
 </style>
 
@@ -82,23 +82,23 @@ body { padding: 0px;
 <!-- NAV -->
 <div class="mainmenu">
   <ul>
-    <li><i class="icon-home icon-large"></i>&nbsp;    <main>INICIO</main><a href="#"><desc>HOME</desc></a></li>
-    <li><i class="icon-comments icon-large"></i>&nbsp;<main> DIRECTIVA </main><a href="dirigentes.php"><desc>2019-2021</desc></a></li>
-    <li><i class="icon-tint icon-large"></i>&nbsp;    <main>AFILIADOS</main><a href="afiliados/index.php"><desc>GENERAL</desc></a></li>
-    <li><i class="icon-comments icon-large"></i>&nbsp;<main>CURSOS</main><a href="alumnos.php"><desc>MATRICULAS</desc></a></li>
-    <li><i class="icon-comments icon-large"></i>&nbsp;<main>REPORTE</main><desc>GENERAL</desc></li>
-    <li><i class="icon-tint icon-large"></i>&nbsp;    <main>[MILAGROS]</main><desc>SESION ACTIVA</desc></li>
-    <li><i class="icon-home icon-large"></i>&nbsp;   <main>SALIR</main><a href="../logout.php"><desc>Cerrar Sesion</desc></a></li>
+    <li>&nbsp;<main>INICIO</main><a href="#"><desc>HOME</desc></a></li>
+    <li>&nbsp;<main> DIRECTIVA </main><a href="dirigentes.php"><desc>2019-2021</desc></a></li>
+    <li>&nbsp;<main>AFILIADOS</main><a href="afiliados/index.php"><desc>GENERAL</desc></a></li>
+    <li>&nbsp;<main>CURSOS</main><a href="alumnos.php"><desc>MATRICULAS</desc></a></li>
+    <li>&nbsp;<main>REPORTE</main><desc>GENERAL</desc></li>
+    <li>&nbsp;<main>[MILAGROS]</main><desc>SESION ACTIVA</desc></li>
+    <li>&nbsp;<main>SALIR</main><a href="../logout.php"><desc>Cerrar Sesion</desc></a></li>
   </ul>
 </div>
 
 
 
-<h1>SISTEMA DE REGISTROS PARA LA ORGANIZACION DE SINDICATO DE TRABAJADORES MINEROS DE LA COMPAÑIA MINERA CONDESTABLE S.A<br>
+<h1>SISTEMA DE REGISTROS PARA LA ORGANIZACION DE SINDICATO DE TRABAJADORES MINEROS DE LA COMPAÑIA MINERA CONDESTABLE S.A
 BIENVENIDO
 </h1> 
 
-<img id="inicio" src="../img/logo2.jpeg">
+<img id="imagen" src="../img/logo2.jpeg">
 
 
 

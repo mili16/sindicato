@@ -1,5 +1,5 @@
 <html>
-<head> <title>CURSOS VACACIONALES</title> 
+<head> <title>CURSO FUTBOL</title> 
 <meta charset="utf-8">
 
 <link rel="stylesheet" type="text/css" href="../../../../css/cursos.css">
@@ -18,50 +18,61 @@ open('#','','top=300,left=300,width=300,height=300') ;
 
 
 <style>
-
-		body{
-	
-	/* Aquí el origen de la imagen */
-  background-image: url(../../../../img/mina.jpg);
- 
-  /* Fijar la imagen de fondo este vertical y
-    horizontalmente y centrado */
-  background-position: center center;
- 
-  /* Esta imagen no debe de repetirse */
-  background-repeat: no-repeat;
- 
-  /* COn esta regla fijamos la imagen en la pantalla. */
-  background-attachment: fixed;
- 
-  /* La imagen ocupa el 100% y se reescala */
-  background-size: cover;
- 
-  /* Damos un color de fondo mientras la imagen está cargando  */
-  background-color: #464646;
+html {
+    background-image: url(../../../../img/fondoceleste.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 
 }
 
-section{
-	background: #fff ;
-	opacity: 0.5;
 
+body {
+ margin: 1px; 
+  padding: 1px;  
 }
-.container
-{
-	width: 1100px;
-	display: flex;
-	justify-content: space-between;/* PARA SEPARAR LOS CONTENEDORES */
-	flex-wrap: wrap;
 
-}
+.mainmenu { 
+    color: #ccc; 
+    font-size: 16px; 
+    font-family: 'Cuprum', Georgia, "Times New Roman", Times, Serif; 
+    background: #002244; 
+    width: 99.9%;
+     height: 51px; 
+     border: 0px solid #026; border-bottom: 3px solid #012; text-shadow: 0 1px 0 #000;}
+
+.mainmenu ul  {margin: 0; padding: 0; }
+.mainmenu li i{ position: absolute; margin-left: -25px; margin-top: 6px; color: #012;  text-shadow: 0 1px 0 #036;}
+.mainmenu li  { float: left; display: block; padding: 10px 10px 10px 50px; border-right: 1px solid #012; cursor: pointer; min-width: 100px; max-width: 100px; }
+
+.mainmenu li:hover { background: #012; }
+.mainmenu li:hover i {color: #036; text-shadow: 0 1px 0 #000;}
+.mainmenu li main {font-weight: 700; margin-top: -18px; }
+.mainmenu li desc { position: relative; float: left; font-size: 11px; color: #888; }
+
+.mainmenu li, .mainmenu li i, .mainmenu li main, .mainmenu li desc {
+    -moz-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+    -webkit-transition: all 0.8s ease-in-out;}
+
+.mainmenu li:hover main { margin-left: 10px;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;}
+.mainmenu li:hover desc { margin-left: 30px;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;}
+
 </style>
 </head>
 <body> 
 	
 <!-- NAV -->
 
- <br><br><br>
+
 
     
 <?php
@@ -80,58 +91,53 @@ section{
 	?>
 
 
-<section>
-<hr> 
-<center> <h2>TALLER VERANO | FUTBOL</h2> 
-         <h3>Sabado 09:00 AM  -  1:00 PM </h3>
+<!-- NAV -->
+                    <!-- NAV -->
+    <div class="mainmenu">
+        <ul>
+            <li>&nbsp;<main>HOME      </main><a href="index.php"><desc>Sitracond</desc></a></li>
+            <li>&nbsp;<main>DIRECTIVA </main><a href="dirigentes.php"><desc>2019-2021</desc></a></li>
+            <li>&nbsp;<main>AFILIADOS </main><a href="afiliados/index.php"><desc>GENERAL</desc></a></li>
+            <li>&nbsp;<main>CURSOS    </main><a href="alumnos.php"><desc>MATRICULAS</desc></a></li>
+            <li>&nbsp;<main>REPORTE   </main><desc>GENERAL</desc></li>
+            <li>&nbsp;<main>[MILAGROS]</main><desc>SESION ACTIVA</desc></li>
+            <li>&nbsp;<main>SALIR     </main><a href="../logout.php"><desc>Cerrar Sesion</desc></a></li>
+        </ul>
+    </div>
+
+ 
+<center> <h1>TALLER VERANO | FUTBOL</h1> 
+         <h2>SABADO 09:00 AM  -  01:00 PM </h2>
 </center>
 <hr>
-</section>
 
-<a href="../index.html" style="margin-right: 48%"><img src='../../../../img/volver.png' width='232' heigth='72' style="margin-right: 49%; margin-top: 9px" ></a> 
+<br>
 
-	<form action = "computacion.php" method="post">
-        
-        <!--Cargar datos de las categorias -->
-        <?php
-        $sql = "Select * from alumnos";
 
-        $resultado = mysqli_query( $conexion, $sql ) or die ( "Algo ha ido mal en la consulta a la base de datos");
-	
-        ?>
+<div id="contenedor">
+    <button target="popup" class="boton"><a href="nuevoalumno.php" 
+        onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;">
+        <img src='../../../../img/agregar.png' width='32' heigth='32'>
+        NUEVO ALUMNO
+    </a></button>
 
-<div class="container">
-<!-- NUEVO alumno BOTON -->
-<div class="box">
-<a href="nuevoalumno.php" target="popup" class="boton" style="margin-left: 70%" 
-onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=450px'); return false;"><img src='../../../../img/agregar.png' width='32' heigth='32'>
-NUEVO ALUMNO
-</a>
+ &nbsp
+
+
+    <button target="popup" class="boton"><a href="modificaralumno.php" 
+        onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;">
+        <img src='../../../../img/modificar.ico' width='32' heigth='32'>
+        MODIFICAR ALUMNO
+    </a></button>
+ &nbsp
+    <button target="popup" class="boton"><a href="eliminaralumno.php" 
+        onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;">
+        <img src='../../../../img/eliminar.png' width='32' heigth='32'>
+        ELIMINAR ALUMNO
+    </a></button>
+
 </div>
-<!-- FIN NUEVO alumno -->
 
-<!-- ------------------------------------------ -->
-<div class="box">
-	
-
-<!-- MODIFICAR alumno BOTON -->
-<a href="modificaralumno.php" target="popup" class="boton" style="margin-left: 70%" 
-onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=500px'); return false;"><img src='../../../../img/modificar.ico' width='32' heigth='32'>
-MODIFICAR ALUMNO
-</a>
-<!-- FIN alumno  -->
-</div>
-<!-- ------------------------------------------ -->
-<div class="box">
-
-<!-- ELIMINAR alumno BOTON -->
-<a href="eliminaralumno.php" target="popup" class="boton" style="margin-left: 70%" 
-onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=270px'); return false;"><img src='../../../../img/eliminar.png' width='32' heigth='32'>
-ELIMINAR ALUMNO
-</a>
-<!-- FIN ELIMINAR alumno -->
-</div>
-</div>
 
 
 

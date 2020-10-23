@@ -1,5 +1,5 @@
 <html>
-<head> <title>CURSOS VACACIONALES</title> 
+<head> <title>CURSOS VOLEY</title> 
 <meta charset="utf-8">
 
 <link rel="stylesheet" type="text/css" href="../../../../css/cursos.css">
@@ -68,7 +68,7 @@ body {
 
 </style>
 
-
+</head>
 <body> 
   
     <?php
@@ -110,7 +110,12 @@ body {
 
 
 <div id="contenedor">
-    <button target="popup" class="boton"><a href="nuevoalumno.php" 
+       <button target="popup" class="boton"><a href="nuevoalumno.php">
+        <img src='../../../../img/volver.png' width='35' heigth='42'>
+        
+    </a></button>
+&nbsp
+     <button target="popup" class="boton"><a href="nuevoalumno.php" 
         onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;">
         <img src='../../../../img/agregar.png' width='32' heigth='32'>
         NUEVO ALUMNO
@@ -135,15 +140,6 @@ body {
 
 
 
-	<form action = "alumnosvoley.php" method="post">
-        
-        <!--Cargar datos de las categorias -->
-        <?php
-        $sql = "Select * from alumnos";
-
-        $resultado = mysqli_query( $conexion, $sql ) or die ( "Algo ha ido mal en la consulta a la base de datos");
-	
-        ?>
 
 
 
