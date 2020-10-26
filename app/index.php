@@ -1,83 +1,40 @@
-
-<?php require_once __DIR__ . '/views/include/head.php'; ?>
-
 <?php
+require_once __DIR__ . '/config/config.php';
 session_start();
-include_once __DIR__ . "/libs/conection.php";
-
-function verificar_login($mysqli, $user, $password, &$result) {
-    $sql = "SELECT * FROM usuarios WHERE usuario = '$user' and password = '$password'";
-    $rec = mysqli_query($mysqli, $sql);
-    $count = 0;
-
-    while ($row = mysqli_fetch_object($rec)) {
-        $count++;
-        $result = $row;
-    }
-
-    if ($count == 1) {
-        return 1;
-    } else {
-        return 0;
-    }
-}
-
-if (!isset($_SESSION['userid']) ) {
-    if (isset($_POST['login'])) {
-        if (verificar_login($con, $_POST['user'], $_POST['password'], $result) == 1) {
-            $_SESSION['userid'] = $result->idusuario;
-            header("location:/inicio");
-        } else {
-            echo '<div class="error"> usuario y/o contraseña es incorrecto, vuelva a intentar.</div>';
-        }
-    }
-
 ?>
-
-<div class="login-container">
-    <h1 class="title"><?= APP['name'] ?></h1>
-    <img class="logo-img" src="<?= APP['logo'] ?>">
-    <hr>
-    <form action="" method="post" class="login">
-        <div class="login-content">
-            <img
-                src="<?= APP['logo'] ?>"
-                alt="Logo login"
-                class="logo-img"
-            >
-        </div>
-        <div class="login-content">
-            <input
-                name="user"
-                type="text"
-                placeholder="USUARIO"
-                class="login-input"
-            >
-        </div>
-        <div class="login-content">
-            <input
-                name="password"
-                type="password"
-                placeholder="CONTRASEÑA"
-                class="login-input"
-            >
-        </div>
-        <div class="login-content">
-            <input
-                name="login"
-                type="submit"
-                value="login"
-                class="login-button"
-            >
-        </div>
-    </form>
-</div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LOGIN <?= APP['name'] ?></title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
 
 <?php
+
+if (isset($_GET['url'])) {
+    $url = $_GET['url'];
+    $path = __DIR__ . "/views/pages/{$url}.php";
+
+    if ($_SESSION['userid'] == null || $_SESSION['userid'] == '') {
+        return header('Location:/');
+    }
+
+    if (is_file($path)) {
+        return require_once $path;
+    }
+
+    return require_once __DIR__ . '/views/pages/404.php';
 } else {
-    echo '¿Desea salir del sistema?';
-    echo '<a href="/libs/logout.php">Click aqui</a>';
+    require_once __DIR__ . '/views/include/login.php';
 }
+
 ?>
 
-<?php require_once __DIR__ . '/views/include/footer.php'; ?>
+</body>
+</html>

@@ -8,8 +8,7 @@
                         <?= $item ?>
                     </a>
                 </li>
-            <?php endforeach;?>
+            <?php endforeach; ?>
         </div>
     </ul>
 </nav>
-

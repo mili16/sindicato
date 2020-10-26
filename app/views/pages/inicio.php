@@ -1,7 +1,5 @@
 <?php require_once __DIR__ . '/../include/menu.php'; ?>
-<?php
 
-?>
 <main class="main">
     <div class="main-banner">
 
@@ -20,5 +18,3 @@
         </div>
     </div>
 </main>
-
-
