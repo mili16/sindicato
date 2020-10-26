@@ -19,30 +19,11 @@ define('MENU_ITEMS', [
     'Salir'
 ]);
 
-define('PAGES', [
-    'home' => 'Inicio',
-    'directive' => 'Directiva',
-    'general' => 'General',
-    'course' => 'Cursos',
-    'reporting' => 'Reporte',
-    'user' => 'Usuario',
-    'exit' => 'Salir'
-]);
-
 define('DB', [
     'host' => 'localhost',
     'name' => 'sindicato',
     'user' => 'root',
     'pass' => ''
 ]);
-
-
-
-// $conection = mysqli_connect(
-//     DB['host'],
-//     DB['user'],
-//     DB['pass'],
-//     DB['name']
-// );
 
 $pageTitle = 'Home';

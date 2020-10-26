@@ -1,0 +1,24 @@
+$primary-color   : #002244;
+$secondary-color : #B56A20;
+$third-color     : #000;
+
+$font-title  : 'Lato',   sans-serif;
+$font-text   : 'Roboto', sans-serif;
+$text-light  : 300;
+$text-normal : 400;
+
+$max-width       : 1200px;
+$offcanvas-width : 15em;
+
+$breakpoints: (
+  small   : 480px,
+  medium  : 768px,
+  large   : 1025px,
+  x-large : 1400px,
+);
+
+@mixin desde($map, $size) {
+  @media screen and (min-width: map-get($map, $size)) {
+      @content;
+  }
+}

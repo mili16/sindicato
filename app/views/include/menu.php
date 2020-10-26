@@ -1,5 +1,5 @@
 <nav class="main-menu">
-    <ul class="menu">
+    <ul class="menu l-container">
         <div class="flexbox">
             <?php foreach (MENU_ITEMS as $item): ?>
                 <?php $link = str_replace(' ', '-', strtolower($item)); ?>

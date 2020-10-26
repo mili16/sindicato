@@ -1,6 +1,8 @@
 <?php
+
 require_once __DIR__ . '/config/config.php';
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -20,8 +22,9 @@ session_start();
 if (isset($_GET['url'])) {
     $url = $_GET['url'];
     $path = __DIR__ . "/views/pages/{$url}.php";
+    $userid = $_SESSION['userid'] == null || $_SESSION['userid'] == '';
 
-    if ($_SESSION['userid'] == null || $_SESSION['userid'] == '') {
+    if ($userid) {
         return header('Location:/');
     }
 
@@ -30,9 +33,10 @@ if (isset($_GET['url'])) {
     }
 
     return require_once __DIR__ . '/views/pages/404.php';
-} else {
-    require_once __DIR__ . '/views/include/login.php';
 }
+
+require_once __DIR__ . '/views/include/login.php';
+
 
 ?>
 
