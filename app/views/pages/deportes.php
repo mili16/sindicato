@@ -8,7 +8,7 @@
     <div class="l-container">
         <div class="main-content">
             <h1 class="title">
-                Directiva
+                Deportes
             </h1>
         </div>
     </div>

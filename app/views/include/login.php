@@ -19,10 +19,11 @@ function verificar_login($mysqli, $user, $password, &$result) {
     return false;
 }
 
-if (!isset($_SESSION['userid'])) {
+if (!isset($_SESSION['userid']) && !isset($_SESSION['user'])) {
     if (isset($_POST['login'])) {
         $verificar = verificar_login($con, $_POST['user'], $_POST['password'], $result);
         if ($verificar) {
+            $_SESSION['user'] = $_POST['user'];
             $_SESSION['userid'] = $result->idusuario;
             header("Location:/inicio");
         } else {
