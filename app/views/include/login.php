@@ -1,5 +1,5 @@
 <?php
-// session_start();
+
 include_once __DIR__ . "/../../libs/conection.php";
 
 function verificar_login($mysqli, $user, $password, &$result) {
@@ -74,6 +74,7 @@ if (!isset($_SESSION['userid']) && !isset($_SESSION['user'])) {
 <?php
 } else {
     echo '¿Desea salir del sistema?';
-    echo '<a href="/libs/logout.php">Click aqui</a>';
+    echo '<a href="/salir">Click aqui</a>';
+    // echo $_SESSION['user'];
 }
 ?>
