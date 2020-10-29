@@ -8,7 +8,7 @@
     <div class="l-container">
         <div class="main-content">
             <h1 class="title">
-                Deportes
+                Repostería
             </h1>
             <div class="main-container">
 
@@ -18,6 +18,13 @@
                 <h2 class="title">VOLEY</h2>
                 <h3>30 CUPOS</h3>
                 <p>jueves 06:00 PM - 10:00 PM</p>
+            </div>
+        </a>
+        <a href="/futbol">
+            <div class="box">
+                <h2 class="title">FUTBOL</h2>
+                <h3>30 CUPOS</h3>
+                <p>sabados 09:00 AM-01:00 PM</p>
             </div>
         </a>
         <a href="/futbol">

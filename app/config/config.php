@@ -26,4 +26,4 @@ define('DB', [
     'pass' => ''
 ]);
 
-$pageTitle = 'Home';
+$pageTitle = $_GET['url'] ?? 'Login';

@@ -1,7 +1,8 @@
 .footer {
-    background : $primary-color;
+    background : darken($primary-color, 10%);
     padding    : 1.5em 0;
     text-align : right;
+    height: 100%;
 
     &-description {
       color      : #fff;

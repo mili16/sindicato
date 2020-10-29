@@ -1,0 +1,17 @@
+.card {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    position: static;
+
+    &-link {
+        background: #000;
+        color: #ddd;
+        padding: 20px;
+        display: block;
+        &:active {
+            transform: scale(1.1);
+        }
+    }
+
+}

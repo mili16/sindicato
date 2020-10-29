@@ -13,7 +13,7 @@
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>LOGIN <?= APP['name'] ?></title>
+    <title><?= ucfirst($pageTitle) . ' | ' . APP['name'] ?></title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -39,6 +39,3 @@
     require_once __DIR__ . '/../views/include/login.php';
 
 ?>
-
-</body>
-</html>

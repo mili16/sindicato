@@ -1,8 +1,9 @@
 .main {
-    min-height     : calc(90vh - 150px);
+    min-height     : calc(90vh - 20px);
     padding-bottom : 0;
     background     : $primary-color;
     height         : 70%;
+    text-align: center;
 
     &-content {
       color      : #000;
@@ -14,6 +15,7 @@
       width      : 100%;
       z-index    : 200;
       color      : #fff;
+
     }
 
     &-banner {
