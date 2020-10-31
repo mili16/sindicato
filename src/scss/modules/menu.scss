@@ -13,6 +13,7 @@
       border     : 1px solid #000;
       font-size  : 18px;
 
+
       &:first-of-type {
         border-left : none;
       }
@@ -34,3 +35,16 @@
       line-height : 1.7;
     }
   }
+
+.menu-item {
+    position: relative;
+  }
+
+.menu-item > .menu {
+  position: absolute;
+  display: none;
+}
+
+.menu-item:hover > .menu {
+  display: block;
+}

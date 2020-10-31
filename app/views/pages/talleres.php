@@ -8,7 +8,7 @@
     <div class="l-container">
         <div class="main-content">
             <h1 class="title">
-                CURSOS VACACIONALES - REGISTROS
+                TALLERES VACACIONALES
             </h1>
 
             <ul class="card">

@@ -4,7 +4,7 @@
     <div class="main-banner">
 
     </div>
-    <img src="" alt="">
+    <!-- <img src="/img/mina.jpg" alt=""> -->
     <div class="l-container">
         <div class="main-content">
             <h1 class="title">

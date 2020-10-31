@@ -273,6 +273,19 @@ a {
   line-height: 1.7;
 }
 
+.menu-item {
+  position: relative;
+}
+
+.menu-item > .menu {
+  position: absolute;
+  display: none;
+}
+
+.menu-item:hover > .menu {
+  display: block;
+}
+
 .button {
   background: #B56A20;
   border-radius: 10px;
