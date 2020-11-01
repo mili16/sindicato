@@ -34,12 +34,12 @@ if (!isset($_SESSION['userid']) && !isset($_SESSION['user'])) {
 
 <div class="login-container">
     <h1 class="title"><?= APP['name'] ?></h1>
-    <img class="logo-img" src="<?= APP['logo'] ?>">
-    <hr>
+    <img class="logo-img" src="">
+    <!-- <hr> -->
     <form action="" method="post" class="login">
         <div class="login-content">
             <img
-                src="<?= APP['logo'] ?>"
+                src="/img/usuario.png"
                 alt="Logo login"
                 class="logo-img"
             >
@@ -61,7 +61,7 @@ if (!isset($_SESSION['userid']) && !isset($_SESSION['user'])) {
             >
         </div>
         <div class="login-content">
-            <input
+            <input class="boton"
                 name="login"
                 type="submit"
                 value="login"
