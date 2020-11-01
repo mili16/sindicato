@@ -1,12 +1,14 @@
 html {
-  background-image: url(../img/mina.jpg);
-  background-size: cover;
-  background-attachment: fixed;
+    background-image: url(../img/fondoceleste.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+
 }
 
 body {
-  padding: 0px;
   margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .mainmenu {

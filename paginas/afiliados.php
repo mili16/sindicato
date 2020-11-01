@@ -1,70 +1,13 @@
 <html>
 <head> <title>	AFILIADOS</title> 
 <meta charset="utf-8">
-
-<link rel="stylesheet" type="text/css" href="../../css/cursos.css">
-
-<link rel="stylesheet" href="../../css/inicio.css">
-<link rel="stylesheet" href="../../css/boton.css">
+<link rel="stylesheet" href="../css/menu.css">
+<link rel="stylesheet" type="text/css" href="../css/cursos.css">
 
 
-<style>
+<link rel="stylesheet" href="../css/boton.css">
 
-html {
-    background-image: url(../../img/fondoceleste.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-
-}
-
-
-body { 
-     margin: 1px;
-    padding: 2px 2px 2px 2px;
-   
-}
-
-
-.mainmenu { 
-    color: #ccc; 
-    font-size: 16px; 
-    font-family: 'Cuprum', Georgia, "Times New Roman", Times, Serif; 
-    background: #002244; 
-    width: 99.9%;
-     height: 51px; 
-     border: 0px solid #026; border-bottom: 3px solid #012; text-shadow: 0 1px 0 #000;}
-
-.mainmenu ul  {margin: 0; padding: 0; }
-.mainmenu li i{ position: absolute; margin-left: -25px; margin-top: 6px; color: #012;  text-shadow: 0 1px 0 #036;}
-.mainmenu li  { float: left; display: block; padding: 10px 10px 10px 50px; border-right: 1px solid #012; cursor: pointer; min-width: 100px; max-width: 100px; }
-
-.mainmenu li:hover { background: #012; }
-.mainmenu li:hover i {color: #036; text-shadow: 0 1px 0 #000;}
-.mainmenu li main {font-weight: 700; margin-top: -18px; }
-.mainmenu li desc { position: relative; float: left; font-size: 11px; color: #888; }
-
-.mainmenu li, .mainmenu li i, .mainmenu li main, .mainmenu li desc {
-    -moz-transition: all 0.8s ease-in-out;
-    -o-transition: all 0.8s ease-in-out;
-    transition: all 0.8s ease-in-out;
-    -webkit-transition: all 0.8s ease-in-out;}
-
-.mainmenu li:hover main { margin-left: 10px;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-    -webkit-transition: all 0.4s ease-in-out;}
-.mainmenu li:hover desc { margin-left: 30px;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-    -webkit-transition: all 0.4s ease-in-out;}
-
-</style>
-
-</style>
-
-
+<title>AFILIADOS</title>
 </head>
 <body> 
 	
@@ -89,17 +32,17 @@ body {
 
 <!-- NAV -->
                     <!-- NAV -->
-    <div class="mainmenu">
-        <ul>
-            <li>&nbsp;<main>HOME      </main><a href="../../index.php"><desc>Sitracond</desc></a></li>
-            <li>&nbsp;<main>DIRECTIVA </main><a href="../dirigentes.php"><desc>2019-2021</desc></a></li>
-            <li>&nbsp;<main>AFILIADOS </main><a href="../afiliados/index.php"><desc>GENERAL</desc></a></li>
-            <li>&nbsp;<main>CURSOS    </main><a href="../alumnos.php"><desc>MATRICULAS</desc></a></li>
-            <li>&nbsp;<main>REPORTE   </main><desc>GENERAL</desc></li>
-            <li>&nbsp;<main>[MILAGROS]</main><desc>SESION ACTIVA</desc></li>
-            <li>&nbsp;<main>SALIR     </main><a href="../../logout.php"><desc>Cerrar Sesion</desc></a></li>
-        </ul>
-    </div>
+<div class="mainmenu">
+  <ul>
+    <li>&nbsp;<main>INICIO</main><a href="index.php"><desc>HOME</desc></a></li>
+    <li>&nbsp;<main>DIRECTIVA </main><a href="dirigentes.php"><desc>2019-2021</desc></a></li>
+    <li>&nbsp;<main>AFILIADOS</main><a href="afiliados.php"><desc>GENERAL</desc></a></li>
+    <li>&nbsp;<main>TALLERES</main><a href="rtaller/registro.html"><desc>REGISTROS</desc></a></li>
+    <li>&nbsp;<main>REPORTE</main><desc>GENERAL</desc></li>
+    <li>&nbsp;<main>[MILAGROS]</main><desc>SESION ACTIVA</desc></li>
+    <li>&nbsp;<main>SALIR</main><a href="../logout.php"><desc>Cerrar Sesion</desc></a></li>
+  </ul>
+</div>
 
    <center> <h1>REGISTRO DE AFILIADOS</h1> </center>
     <hr>
@@ -113,28 +56,35 @@ body {
 <div id="contenedor">
     <button target="popup" class="boton"><a href="#" 
         onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;">
-        <img src='../../img/agregar.png' width='32' heigth='32'>
+        <img src='../img/agregar.png' width='32' heigth='32'>
         AGREGAR AFILIADOS
     </a></button>
 
     <button target="popup" class="boton"><a href="#" 
         onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;">
-        <img src='../../img/modificar.ico' width='32' heigth='32'>
+        <img src='../img/modificar.ico' width='32' heigth='32'>
         MODIFICAR AFILIADOS
     </a></button>
 
     <button target="popup" class="boton"><a href="#" 
         onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;">
-        <img src='../../img/eliminar.png' width='32' heigth='32'>
+        <img src='../img/eliminar.png' width='32' heigth='32'>
         ELIMINAR AFILIADOS
+    </a></button>
+
+    <button target="popup" class="boton"><a href="#" 
+        onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;">
+        <img src='../img/buscar.png' width='32' heigth='32'>
+        BUSCAR AFILIADO
     </a></button>
 
 </div>
 
 
 
+
 	<?php
-	if (isset($_POST["afiliados"]) && $_POST["afiliados"]!="a")    {
+    if (isset($_POST["afiliados"]) && $_POST["afiliados"]!="a")    {
     $nombre= $_POST["afiliados"];   
      
     $consulta = "SELECT * FROM afiliados where nombre='".$nombre."'";
@@ -143,9 +93,9 @@ body {
                $consulta = "SELECT * FROM afiliados";
     }
     
-	$resultado = mysqli_query($conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
-	// Motrar el resultado de los registro de la base de datos
-	// Encabezado de la tabla
+    $resultado = mysqli_query($conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+    // Motrar el resultado de los registro de la base de datos
+    // Encabezado de la tabla
 	echo "<table width='800' align='center'>";
 	echo"<caption>REGISTRO GENERAL</caption>";
 	echo "<tr>";

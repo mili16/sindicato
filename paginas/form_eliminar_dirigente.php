@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-        <link rel="stylesheet" href="../../../../css/style.css">
-        <link rel="stylesheet" href="../../../../css/boton.css">
-	<title>ELIMINAR ALUMNO</title>
-
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/boton.css">
+	<title>ELIMINAR DIRIGENTE</title>
 	<style>
 		h2{
 			text-align: center;
@@ -19,9 +18,9 @@
 	</style>
 </head>
 <body>
- <h2>ELIMINAR ALUMNO</h2>
+ <h2>ELIMINAR DIRIGENTE</h2>
 
-	<form class="sign-up" action="eliminaralumno.php" method="post">
+	<form class="sign-up" action="form_eliminar_dirigente.php" method="post">
 
 		<input type="text" class="sign-up-input" name="eliminar"  placeholder="INGRESE CODIGO A ELIMINAR" required>
 
@@ -41,9 +40,9 @@
 mysql_connect("localhost", "root", "") or die("conexion fallida");  //CONEXION MENSAJE DE LA BD 
 mysql_select_db("sindicato")or die("falla bd"); // CONEXION A LA BASE DE DATO
 $id = $_POST['eliminar']; 
-$query = "delete from alumnos  where id_alumno = '".$id."'";  //CONSULTA 
+$query = "delete from dirigentes  where id_dirigente = '".$id."'";  //CONSULTA 
 if(mysql_query($query)){ //MUESTRA SI ES VERDADERO O FALSO 
- echo "ALUMNO ".$id." ELIMINADO";//MENSAJE DE "ELIMINADO"
+ echo "DIRIGENTE ".$id." ELIMINADO";//MENSAJE DE "ELIMINADO"
  }
  else{ 
  echo "no se elimino";//MENSAJE DE NO ELIMINADO

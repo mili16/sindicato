@@ -1,13 +1,13 @@
 <html>
-<head> <title>ALUMNOS</title> 
+<head>  
 <meta charset="utf-8">
 
 <link rel="stylesheet" type="text/css" href="../css/cursos.css">
 
-<link rel="stylesheet" href="../css/inicio.css">
-
+<!-- <link rel="stylesheet" href="../css/inicio.css"> -->
+<link rel="stylesheet" href="../css/menu.css">
 <link rel="stylesheet" href="../css/boton.css">
-
+<title> HORARIO</title>
 
 
 <!-- pop up -->
@@ -21,81 +21,67 @@ open('#','','top=300,left=300,width=300,height=300') ;
 
 
 </head>
-<body   bgcolor="#3576FA"> 
+<body> 
 	
 <!-- NAV -->
 
 
+<div class="mainmenu">
+  <ul>
+    <li>&nbsp;<main>INICIO</main><a href="index.php"><desc>HOME</desc></a></li>
+    <li>&nbsp;<main>DIRECTIVA </main><a href="dirigentes.php"><desc>2019-2021</desc></a></li>
+    <li>&nbsp;<main>AFILIADOS</main><a href="afiliados.php"><desc>GENERAL</desc></a></li>
+    <li>&nbsp;<main>TALLERES</main><a href="rtaller/registro.html"><desc>REGISTROS</desc></a></li>
+    <li>&nbsp;<main>REPORTE</main><desc>GENERAL</desc></li>
+    <li>&nbsp;<main>[MILAGROS]</main><desc>SESION ACTIVA</desc></li>
+    <li>&nbsp;<main>SALIR</main><a href="../logout.php"><desc>Cerrar Sesion</desc></a></li>
+  </ul>
+</div>
 
-<header>
-  <nav>
-<ul id="menu">
-    <li><a href="index.html">INICIO</a></li>
-    <li><a href="#">CURSOS VACACIONALES</a>
-<ul>
-      <li> <a href="horario.php">HORARIOS</a></li>
-      <li> <a href="alumnos.php">REGISTRAR</a></li>
-</ul>
-
-    </li>
-
-    <li>
-        <a href="#">DIRECTIVA</a>
-                        <ul>
-                            <li><a href="dirigentes.php">DIRIGENTES</a></li>
-                            <li><a href="#">DELEGADOS</a></li>
-                        </ul>
-    </li>
-    <li><a href="#">DELEGADOS</a></li>
-    <li> <a href="#">AFILIADOS</a>
-                        <ul>
-                            <li><a href="#">CELULAR</a></li>
-
-                            <li><a href="afiliados/index.php">DATOS</a></li>
-
-                            <li><a href="#">TURNOS</a></li>
-                        </ul>
-    </li>
-    <li><a href="reportes/reporte.php">REPORTES</a></li>
-    <li><a href="cerrar.php">CERRAR SESION</a></li>
-
-</ul>
-</nav>
-</header>
-
-
-<br><br><br><br><br><br>
-<hr>
-    
-
-
-
-	<center> <h2>HORARIOS</h2> </center>
+  <center> <h1>HORARIO TALLERES</h1> </center>
     <hr>
 
 
 
 
-<table>
-	<tr>
-         <th> 
-         	<a href="" class="boton"  ><img src='../img/horario.png' width='120' heigth='120'>
-            HORARIO MARINERA
-            </a>
-         </th>
 
+    <table width='800' align='center'>
+     <caption>SITRACOND</caption>
+     <tr>
+      <th>LUNES</th>
+      <th>MARTES</th>
+      <th>MIERCOLES</th>
+      <th>JUEVES</th>
+      <th>VIERNES</th>
+      <th>SABADO</th>
+    </tr>
 
-         <th>
-         	<a href="" class="boton"  ><img src='../img/horario.png' width='120' heigth='120'>
-            HORARIO REPOSTERIA
-            </a>
-        </th>
-        
+    <tr>
+      <td>REPOSTERIA</td>
+      <td></td>
+      <td>REPOSTERIA</td>
+      <td></td>
+      <td>REPOSTERIA</td>
+      <td></td>
+    </tr>
 
+    <tr>
+      <td></td>
+      <td>VOLEY</td>
+      <td></td>
+      <td>VOLEY</td>
+      <td></td>
+      <td>VOLEY</td>
+    </tr>
 
-</tr>
-</table>
-
-
-</body>
+    <tr>
+      <td></td>
+      <td>FUTBOL</td>
+      <td></td>
+      <td>FUTBOL</td>
+      <td></td>
+      <td>FUTBOL</td>
+    </tr>
+  </table>
+  <body>
 </html>
