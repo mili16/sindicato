@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-        <link rel="stylesheet" href="../../../../css/style.css">
-        <link rel="stylesheet" href="../../../../css/boton.css">
-        <link rel="stylesheet" type="text/css" href="../../../../css/icon.css">
+        <link rel="stylesheet" href="../../../css/style.css">
+        <link rel="stylesheet" href="../../../css/boton.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/icon.css">
 	<title>ELIMINAR ALUMNO</title>
 
 	<style>
@@ -37,10 +37,10 @@ text-align:center;
 
 	<form class="sign-up" action="eliminaralumno.php" method="post">
 
-		<input type="text" class="sign-up-input" name="eliminar"  placeholder="INGRESE CODIGO A ELIMINAR" required>
+		<input type="text" class="sign-up-input" name="eliminar"  placeholder="INGRESE CODIGO A ELIMINAR" >
 
 
-		<input type="submit" class="sign-up-input" class="sign-up-button" value="ELIMINAR" required>
+		<input type="submit" class="sign-up-input" class="sign-up-button" value="ELIMINAR" name="btn1" required>
 	</form>
 
 </form>
@@ -51,12 +51,17 @@ text-align:center;
 
 
 
+
 <?php
-mysql_connect("localhost", "root", "") or die("conexion fallida");  //CONEXION MENSAJE DE LA BD 
-mysql_select_db("sindicato")or die("falla bd"); // CONEXION A LA BASE DE DATO
+
+
+ //CONSULTA 
+if(isset($_POST['btn1']))
+{	include("conexion.php");
 $id_alum = $_POST['eliminar']; 
-$query = "delete from alumnos  where id_alum = '".$id_alum."'";  //CONSULTA 
-if(mysql_query($query)){ //MUESTRA SI ES VERDADERO O FALSO 
+$conexion ->query(" DELETE from alumnos  where id_alum = '".$id_alum."'");
+
+
  echo "<div class='correcto'><span class='icon icon-smile'></span> Alumno eliminado </div>";//MENSAJE DE "ELIMINADO"
  }
  else{ 

@@ -15,18 +15,8 @@
 	
     <?php
 // Datos de la base de datos
-    $usuario = "root";
-    $password = "";
-    $servidor = "localhost";
-    $basededatos = "sindicato";
-    
-    // creación de la conexión a la base de datos con mysql_connect()
-    $conexion = mysqli_connect( $servidor, $usuario, $password ) or die ("No se ha podido conectar al servidor de Base de datos");
-    
-    // Selección del a base de datos a utilizar
-    $db = mysqli_select_db( $conexion, $basededatos ) or die ( "Upps! Pues va a ser que no se ha podido conectar a la base de datos" );
-    // establecer y realizar consulta. guardamos en variable.
-    ?>
+ include("conexion.php");
+  ?>
 
 <!-- NAV -->
                     <!-- NAV -->
@@ -42,7 +32,7 @@
   </ul>
 </div>
 
-	<center> <h1>DIRIGENTES 2019-2021</h1> </center>
+<h1>DIRIGENTES 2019-2021</h1>
     <hr>
 
 
@@ -76,7 +66,7 @@
 
 
 
-
+<!-- casilla -->
 	<form action = "dirigentes.php" method="post">
         
         <!--Cargar datos de las categorias -->
@@ -86,7 +76,7 @@
 	
         ?>
 
-<!-- casilla -->
+
 
         <select name="dirigentes" >
         <option value="a"  >--Mostrar Dirigentes--</option>
@@ -99,11 +89,12 @@
         ?>
         </select>
  
-<!-- fin casilla -->
+
 
 
     <input type="submit" name ="enviar" class="boton" value="Mostrar datos">
 	</form>
+    <!-- fin casilla -->
 	<?php
 	if (isset($_POST["dirigentes"]) && $_POST["dirigentes"]!="a")    {
     $nom_dirigente= $_POST["dirigentes"];    

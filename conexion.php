@@ -1,9 +1,15 @@
-<?php
-// datos para la conexion a mysql
+    <?php
+// Datos de la base de datos
+    $host = "localhost";
+    $basededatos = "sindicato";
+    $usuariodb = "root";
+    $clavedb = "";
+    
+    // creación de la conexión a la base de datos con mysql_connect()
+    $conexion = new mysqli($host,$usuariodb,$clavedb,$basededatos);
 
-define('DB_SERVER','localhost');
-define('DB_NAME','sindicato');
-define('DB_USER','root');
-define('DB_PASS','');
-$con = mysqli_connect(DB_SERVER,DB_USER, DB_PASS, DB_NAME);
-?>
+    if ($conexion->connect_errno) {
+    	echo "error en la conexion a la bd";
+    	exit();
+    }
+    ?>

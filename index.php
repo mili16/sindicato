@@ -154,7 +154,7 @@ if(!isset($_SESSION['userid']))
 
 
 
-<form action="" method="post" class="login" style="margin-top: 3%;" >
+<form action="paginas/index.php" method="post" class="login" style="margin-top: 3%;" >
    <h1>SITRACOND <img class="logo" src="img/logo.jpe"></h1>
 
     <hr>
