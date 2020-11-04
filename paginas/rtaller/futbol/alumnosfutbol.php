@@ -45,7 +45,7 @@ include("conexion.php");
 </div>
 
  
-<h1>REGISTRO</h1><h2>TALLER DE FUTBOL </h2> 
+<h1>REGISTRO</h1> <h2>TALLER DE FUTBOL </h2> 
 
 <hr>
 

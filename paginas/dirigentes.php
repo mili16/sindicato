@@ -40,7 +40,7 @@
 
 
 <div id="contenedor">
-    <button target="popup" class="boton"><a href="form_nuevo_dirigente.php" 
+    <button target="popup" class="boton"><a href="dirigentes/form_nuevo_dirigente.php" 
         onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;">
         <img src='../img/agregar.png' width='32' heigth='32'>
         AGREGAR
@@ -49,13 +49,13 @@
  &nbsp
 
 
-    <button target="popup" class="boton"><a href="form_modificar_dirigente.php" 
+    <button target="popup" class="boton"><a href="dirigentes/form_modificar_dirigente.php" 
         onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;">
         <img src='../img/modificar.ico' width='32' heigth='32'>
         MODIFICAR
     </a></button>
  &nbsp
-    <button target="popup" class="boton"><a href="form_eliminar_dirigente.php" 
+    <button target="popup" class="boton"><a href="dirigentes/form_eliminar_dirigente.php" 
         onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;">
         <img src='../img/eliminar.png' width='32' heigth='32'>
         ELIMINAR 
@@ -67,33 +67,34 @@
 
 
 <!-- casilla -->
-	<form action = "dirigentes.php" method="post">
+	
+    <form action = "dirigentes.php" method="post">
         
         <!--Cargar datos de las categorias -->
         <?php
         $sql = "Select * from dirigentes";
         $resultado = mysqli_query( $conexion, $sql ) or die ( "Algo ha ido mal en la consulta a la base de datos");
-	
+    
         ?>
 
-
+<!-- casilla -->
 
         <select name="dirigentes" >
-        <option value="a"  >--Mostrar Dirigentes--</option>
+        <option value="a"  >Nombre Dirigente</option>
        <?php
         while ($row = mysqli_fetch_array($resultado))
-	{
-		
-		echo "<option value=\"".$row['nom_dirigente']."\">".$row['nom_dirigente']."</option>"; 
-	}
+    {
+        
+        echo "<option value=\"".$row['nom_dirigente']."\">".$row['nom_dirigente']."</option>"; 
+    }
         ?>
         </select>
  
-
+<!-- fin casilla -->
 
 
     <input type="submit" name ="enviar" class="boton" value="Mostrar datos">
-	</form>
+    </form>
     <!-- fin casilla -->
 	<?php
 	if (isset($_POST["dirigentes"]) && $_POST["dirigentes"]!="a")    {

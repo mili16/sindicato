@@ -55,7 +55,61 @@
         ELIMINAR AFILIADO
     </a></button>
 
-    
+
+<!-- inicio buscador -->
+
+    <form action="afiliados.php" method="post">
+    <p>Buscar por apellido</p>
+    <input type="text" class="sign-up-input" name="ape_afiliado" placeholder="Ingrese Apellido">
+
+    <input type="submit" name="btn2" value="Buscar" >
+</form>
+
+<?php 
+
+include("../conexion.php");
+$ape_afiliado="";
+
+if(isset($_POST['btn2']))
+
+{
+    $ape_afiliado=$_POST['ape_afiliado'];
+    $existe=0;
+
+    if($ape_afiliado==""){
+        echo "Ingresar Datos";
+    }
+    else{
+
+        $resultados = mysqli_query($conexion,"SELECT * FROM afiliado where ape_afiliado='$ape_afiliado'");
+echo "  
+            <table width='800' align='center'>
+            <tr>
+            <th>CODIGO</th><th>NOMBRE</th><th>APELLIDO</th>
+            </tr>";
+$existe=1;
+        while ($consulta = mysqli_fetch_array($resultados))
+        {
+
+
+            echo"
+            <tr> 
+            <td>".$consulta['id_afiliado']."</td> 
+            <td>".$consulta['nom_afiliado']."</td>  
+            <td>".$consulta['ape_afiliado']."</td>
+            </tr>
+             </tr>";
+       
+
+            $existe++;
+        }   echo"</table>";
+        if($existe==0){
+            echo "No se encontro resultados de: $ape_afiliado";
+        }
+    }
+}?>
+
+<!-- fin buscador -->
 
 </div>
 

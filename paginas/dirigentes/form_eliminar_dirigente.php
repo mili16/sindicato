@@ -25,26 +25,24 @@
 		<input type="text" class="sign-up-input" name="eliminar"  placeholder="INGRESE CODIGO A ELIMINAR" required>
 
 
-		<input type="submit" class="sign-up-input" class="sign-up-button" value="ELIMINAR" required>
+		<input type="submit" class="sign-up-input" class="sign-up-button" value="ELIMINAR" name="btn1" required>
 	</form>
 
-</form>
 
 
 </body>
 </html>
-
-
-
 <?php
-mysql_connect("localhost", "root", "") or die("conexion fallida");  //CONEXION MENSAJE DE LA BD 
-mysql_select_db("sindicato")or die("falla bd"); // CONEXION A LA BASE DE DATO
-$id = $_POST['eliminar']; 
-$query = "delete from dirigentes  where id_dirigente = '".$id."'";  //CONSULTA 
-if(mysql_query($query)){ //MUESTRA SI ES VERDADERO O FALSO 
- echo "DIRIGENTE ".$id." ELIMINADO";//MENSAJE DE "ELIMINADO"
+ //CONSULTA 
+if(isset($_POST['btn1']))
+{	include("../conexion.php");
+$id_dirigente = $_POST['eliminar']; 
+$conexion ->query("delete from dirigentes  where id_dirigente = '".$id_dirigente."'");
+
+
+ echo "<div class='correcto'><span class='icon icon-smile'></span> Dirigente  eliminado </div>";//MENSAJE DE "ELIMINADO"
  }
  else{ 
- echo "no se elimino";//MENSAJE DE NO ELIMINADO
+ echo "<div class='error'><span class='icon icon-sad2'></span> No se pudo Eliminar</div>";//MENSAJE DE NO ELIMINADO
 } 
 ?>

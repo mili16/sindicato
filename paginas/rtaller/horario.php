@@ -57,7 +57,7 @@ open('#','','top=300,left=300,width=300,height=300') ;
     </tr>
 
     <tr>
-      <td>REPOSTERIA</td>
+      <td>REPOSTERIA | P. Rosa Tito Arpe</td>
       <td></td>
       <td>REPOSTERIA</td>
       <td></td>
