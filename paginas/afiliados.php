@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head> 
-    <meta charset="utf-8" >
+   <meta charset="ISO-8859-1">
     <link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" type="text/css" href="../css/cursos.css">
     <link rel="stylesheet" href="../css/boton.css">
@@ -50,7 +50,7 @@
         MODIFICAR AFILIADO
     </a></button>
 
-    <button target="popup" class="boton"><a href="#" 
+    <button target="popup" class="boton"><a href="afiliados/eliminar_afiliado.php" 
         onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;">
         <img src='../img/eliminar.png' width='32' heigth='32'>
         ELIMINAR AFILIADO

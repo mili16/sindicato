@@ -3,5 +3,5 @@
 	session_unset();
 	session_destroy();
 
-header( "location:http://localhost/sindicato//index.php" );
+header( "index.php" );
 ?>
