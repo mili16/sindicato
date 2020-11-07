@@ -7,19 +7,19 @@
 <link rel="stylesheet" type="text/css" href="../css/cursos.css">
 <link rel="stylesheet" href="../css/inicio.css">
    
-<title>DIRECTIVA 2019</title> </head>
+<title>ALUMNOS</title> </head>
 <style>
 
 html {
-    background-image: url(../img/mina.jpg);
+    background-image: url(../img/fondoceleste.jpg);
     background-size: cover;
     background-attachment: fixed;
 
 }
 
-
-body { padding: 0px;
- margin: 0px;   
+body {
+ margin: 0px; 
+  padding:0px;  
 }
 
 .mainmenu { 
@@ -28,8 +28,8 @@ body { padding: 0px;
     font-family: 'Cuprum', Georgia, "Times New Roman", Times, Serif; 
     background: #002244; 
     width: 100%;
-     height: 51px; 
-     border: 0px solid #026; border-bottom: 3px solid #012; text-shadow: 0 1px 0 #000;}
+    height: 51px; 
+    border: 0px solid #026; border-bottom: 3px solid #012; text-shadow: 0 1px 0 #000;}
 
 .mainmenu ul  {margin: 0; padding: 0; }
 .mainmenu li i{ position: absolute; margin-left: -25px; margin-top: 6px; color: #012;  text-shadow: 0 1px 0 #036;}
@@ -56,10 +56,8 @@ body { padding: 0px;
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;}
-#inicio{
-    width: 500px;
-    margin:8px auto;
-    display:block;}
+#contenedor{
+    margin-top: 10%;
 }
 </style>
 </head>
@@ -69,45 +67,50 @@ body { padding: 0px;
 
 
 
-<div class="mainmenu">
-  <ul>
-    <li><i class="icon-home icon-large"></i>&nbsp;<main>INICIO</main><desc>HOME</desc></li>
-    <li><i class="icon-comments icon-large"></i>&nbsp;<main>DIRECTIVA</main><desc>2019-2021</desc></li>
-    <li><i class="icon-tint icon-large"></i>&nbsp;<main>AFILIADOS</main><desc>GENERAL</desc></li>
-    <li><i class="icon-comments icon-large"></i>&nbsp;<main>CURSOS</main><desc>MATRICULAS</desc></li>
-    <li><i class="icon-comments icon-large"></i>&nbsp;<main>REPORTE</main><desc>GENERAL</desc></li>
-    <li><i class="icon-tint icon-large"></i>&nbsp;<main>[MILAGROS]</main><desc>SESION ACTIVA</desc></li>
-    <li><i class="icon-home icon-large"></i>&nbsp;<main>SALIR</main><desc>CERRAR SESION</desc></li>
-  </ul>
+    <div class="mainmenu">
+        <ul>
+            <li>&nbsp;<main>HOME      </main><a href="index.php"><desc>Sitracond</desc></a></li>
+            <li>&nbsp;<main>DIRECTIVA </main><a href="dirigentes.php"><desc>2019-2021</desc></a></li>
+            <li>&nbsp;<main>AFILIADOS </main><a href="afiliados/index.php"><desc>GENERAL</desc></a></li>
+            <li>&nbsp;<main>CURSOS    </main><a href="alumnos.php"><desc>MATRICULAS</desc></a></li>
+            <li>&nbsp;<main>REPORTE   </main><desc>GENERAL</desc></li>
+            <li>&nbsp;<main>[MILAGROS]</main><desc>SESION ACTIVA</desc></li>
+            <li>&nbsp;<main>SALIR     </main><a href="../logout.php"><desc>Cerrar Sesion</desc></a></li>
+        </ul>
+    </div>
+
+    <center> <h1> SITRACOND CURSOS </h1> </center>
+    <hr>
+
+
+
+
+<div id="contenedor">
+    <button target="popup" class="boton"><a href="cursos/deporte/index.html" >
+        
+        <img src='../img/modificar.ico' width='32' heigth='32'>
+        REGISTRO DEPORTE
+    </a></button>
+
+
+ &nbsp
+
+    <button target="popup" class="boton"><a href="cursos/reposteria/index.html"> 
+        <img src='../img/modificar.ico' width='32' heigth='32'>
+        REGISTRO REPOSTERIA
+    </a></button>
+ &nbsp
+    <button target="popup" class="boton"><a href="#">
+         <img src='../img/horario.png' width='32' heigth='32'>
+        HORARIO DEPORTE 
+    </a></button>
+ &nbsp
+        <button target="popup" class="boton"><a href="#"> 
+       <img src='../img/horario.png' width='32' heigth='32'>
+        HORARIO REPOSTERIA  
+    </a></button>
+
 </div>
-
-
-
-
-
-<hr>
- <h1>   
-
-
-
-CURSOS VACACIONALES - REGISTROS 
-</h1>
-<hr>
-
-
-
-
-
-          <a href="cursos/deporte/index.html" class="boton" style="margin-left: 20%" "text-align: center;" ><img src='../img/pelota.jpg' style="border-radius: 50%;" width='100' heigth='100'> <br/>
-            DEPORTE
-            </a>
-
-
-
-         	<a href="cursos/reposteria/index.html" class="boton" style="margin-left: 20%" "text-align: center;" width='100' heigth='100'><img src='../img/reposteria.png'  width='180' heigth='180'> <br/>
-            REPOSTERIA </a>
-    
-
 
 </body>
 </html>

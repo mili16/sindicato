@@ -1,27 +1,31 @@
 body {font-family: Arial, Helvetica, sans-serif;}
 
 table{    
-          font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-          font-size: 12px;    
-          margin: auto;  
-          text-align: left;  
-          border-collapse: collapse;
-     }
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 12px;    
+  margin: auto;  
+  text-align: left;  
+  border-collapse: collapse;
+}
 
 th {    
-         font-size: 13px;     font-weight: normal;
-         padding: 8px;   
-         background: #6386FA;
-         border-top: 4px solid #6182FD;  
-         border-bottom: 1px solid #fff; color: #00308F; 
-    }
+ font-size: 13px;     font-weight: normal;
+ padding: 8px;   
+ text-align: center;
+ background: #002244;
+ color:#ccc;
+ font-family: "Cuprum", Georgia, "Times New Roman", Times, Serif;
+ font-size:17px; 
+ 
+}
 
-td {    padding: 12px;     
-        background: #E6EAFA;  
-        border-bottom: 1px solid #fff;
-        color: #669;   
-        border-top: 1px solid transparent; 
-    }
+td {
+  padding: 12px;     
+  background: #E6EAFA;  
+  border-bottom: 1px solid #fff;
+  color: #669;   
+  border-top: 1px solid transparent; 
+}
 
 tr:hover td { background: #45C6FC; color: #339; }
 
