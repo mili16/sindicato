@@ -1,0 +1,11 @@
+{
+    "name": "sindicato/sindicato",
+    "description": "Proyecto para Titulacion",
+    "authors": [
+        {
+            "name": "Eduardo Torres C.",
+            "email": "edtorres.pe@gmail.com"
+        }
+    ],
+    "require": {}
+}
