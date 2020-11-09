@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-        <link rel="stylesheet" href="../../../css/style.css">
-        <link rel="stylesheet" href="../../../css/boton.css">
-        <link rel="stylesheet" type="text/css" href="../../../css/icon.css">
-	<title>ELIMINAR ALUMNO</title>
+        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/boton.css">
+	<title>ELIMINAR AFILIADO</title>
 
 	<style>
 		h2{
@@ -36,8 +35,8 @@ text-align:center;
  <h2>ELIMINAR AFILIADO</h2>
 
 	<form class="sign-up" action="eliminar_afiliado.php" method="post">
-
-		<input type="text" class="sign-up-input" name="eliminar"  placeholder="INGRESE CODIGO DE AFILIADO" >
+			<label> Ingrese Id de Afiliado</label>
+		<input type="text" class="sign-up-input" name="eliminar" >
 
 
 		<input type="submit" class="sign-up-input" class="sign-up-button" value="ELIMINAR" name="btn1" required>

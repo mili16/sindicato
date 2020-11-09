@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="../../css/style.css">
         <link rel="stylesheet" href="../../css/boton.css">
         <link href="../../css/icon.css" rel="stylesheet" type="text/css" /> 
-	<title>NUEVO ALUMNO</title>
+	<title>NUEVO AFILIADO</title>
 	<style>
 		.error{
 border:solid 1px #DEDEDE;
@@ -26,6 +26,7 @@ text-align:center;
 <body>
 	<form class="sign-up" action="nuevo_afiliado.php" method="POST">
 
+		<input type="text" class="sign-up-input" name="id_afiliado"  maxlength="30" placeholder="ID AFILIADO">
 
 		<input type="text" class="sign-up-input" name="ape_afiliado"  maxlength="30" placeholder="APELLIDOS">
 
@@ -47,7 +48,7 @@ text-align:center;
 
 		<input type="text" class="sign-up-input" name="distrito" maxlength="24" placeholder="DISTRITO">
 
-		<input type="text" class="sign-up-input" name="fech_nac" maxlength="10" placeholder="FECHA DE NACIMIENTO">
+		<input type="date" class="sign-up-input" name="fech_nac" maxlength="10" placeholder="FECHA DE NACIMIENTO">
 
 		<input type="text" class="sign-up-input" name="grado_instruccion" maxlength="20" placeholder="GRADO DE INSTRUCCION">
 
@@ -64,7 +65,7 @@ text-align:center;
 
 		<input type="text" class="sign-up-input" name="categoria_o_cargo" maxlength="25" placeholder="CATEGORIA O CARGO">
 
-		<input type="text" class="sign-up-input" name="fech_ingreso_empresa" maxlength="10" placeholder="INGRESO A CMC">
+		<input type="date" class="sign-up-input" name="fech_ingreso_empresa" maxlength="10" placeholder="INGRESO A CMC">
 
 		<input type="text" class="sign-up-input" name="nom_padre" maxlength="30" placeholder="NOMBRES DEL PADRE">
 
@@ -88,7 +89,7 @@ if(isset($_POST['btn1']))
 {
 	include ("../conexion.php");
 
-
+	$id_afiliado = $_POST['id_afiliado'];
 	$ape_afiliado = $_POST['ape_afiliado'];
 	$nom_afiliado = $_POST['nom_afiliado'];
 	$dni_afiliado=$_POST['dni_afiliado'];
@@ -109,18 +110,19 @@ if(isset($_POST['btn1']))
 	$nom_padre=$_POST['nom_padre'];
 	$ape_padre=$_POST['ape_padre'];
 	$nom_madre=$_POST['nom_madre'];
+	$ape_madre=$_POST['ape_madre'];
 	$nom_esposa=$_POST['nom_esposa'];
 
 // echo $nombre. " ".$apellido. "".$profesor;
-	$conexion ->query("INSERT INTO afiliado (ape_afiliado,nom_afiliado,dni_afiliado,
+	$conexion ->query("INSERT INTO afiliado (id_afiliado,ape_afiliado,nom_afiliado,dni_afiliado,
 		tipo_sangre,direccion,ciudad,referencia_ubicacion,departamento,provincia,distrito,fech_nac,
 		grado_instruccion,telefono,e_mail,area_trabajo,categoria_o_cargo,fech_ingreso_empresa,nom_padre,ape_padre,
-		nom_madre,nom_esposa)
-		VALUES ('$ape_afiliado','$nom_afiliado','$dni_afiliado',
+		nom_madre,ape_madre,nom_esposa)
+		VALUES ('$id_afiliado','$ape_afiliado','$nom_afiliado','$dni_afiliado',
 		'$tipo_sangre','$direccion','$ciudad','$referencia_ubicacion','$departamento','$provincia','$distrito','$fech_nac',
 		'$grado_instruccion','$telefono','$e_mail','$area_trabajo','$categoria_o_cargo','$fech_ingreso_empresa',
 		'$nom_padre','$ape_padre',
-		'$nom_madre','$nom_esposa')");
+		'$nom_madre','$ape_madre','$nom_esposa')");
 	
 	echo "<div class='correcto'>&#11088; 
 	Datos Ingresados </div>";
@@ -131,8 +133,8 @@ else
 
 	echo "<div class='error'>&#128162;
 	Error:  Completar todos los datos </div>";
-	include("../cerrarbd.php");
-}
+	
+}include("../cerrar.php");
 ?>
 
 

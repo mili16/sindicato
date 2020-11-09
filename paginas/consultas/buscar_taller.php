@@ -33,7 +33,7 @@
     <p>Buscar Alumno</p>
     <input type="text" class="sign-up-input" name="ape_alum" placeholder="Ingrese Apellido">
 
-    <input type="submit" name="buscar_alumno" value="Buscar" >
+    <input type="submit" class="sign-up-input" name="buscar_alumno" value="Buscar" >
 </form>
 
 
@@ -46,7 +46,7 @@
                 <option value="VOLEY" >VOLEY</option>
                 <option value="REPOSTERIA" >REPOSTERIA</option>
         </select>
-    <input type="submit" name="buscar_taller" value="Buscar" >
+    <input type="submit" class="sign-up-input" name="buscar_taller" value="Buscar" >
 </form>
 
 

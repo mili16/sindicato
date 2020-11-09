@@ -13,6 +13,7 @@
 </head>
 
 <body> 
+
 <!-- buscar afiliado -->
 <div class="mainmenu">
   <ul>
@@ -26,13 +27,18 @@
   </ul>
 </div>
 
+    <h1>CONSULTA <h2>AFILIADOS</h2> </h1>
+
+    <hr>
+
+
 <div>
 <form class="sign-up" action="buscar_afiliado.php" method="post">
     <p>AFILIADO</p>
     <p>Datos Personales</p>
     <input type="text" class="sign-up-input" name="ape_afiliado" placeholder="Ingrese Apellido">
 
-    <input type="submit" name="buscarafi" value="Buscar" >
+    <input type="submit" class="sign-up-input" name="buscarafi" value="Buscar" >
 </form>
 
 
@@ -46,7 +52,7 @@
                 <option value="Extraccion" >EXTRACCION</option>
         </select>
 
-    <input type="submit" name="buscar_area" value="Buscar" >
+    <input type="submit" class="sign-up-input" name="buscar_area" value="Buscar" >
 </form>
 
 
@@ -55,7 +61,7 @@
     <p>Caso de Emergencia</p>
     <input type="text" class="sign-up-input" name="ape_afiliado" placeholder="Ingrese Apellido">
 
-    <input type="submit" name="buscar_emergencia" value="Buscar" >
+    <input type="submit" class="sign-up-input" name="buscar_emergencia" value="Buscar" >
 </form>
 </div>
 

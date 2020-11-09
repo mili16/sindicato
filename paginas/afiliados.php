@@ -13,7 +13,7 @@
 <body> 
 	
    
-<?php include("conexion.php");  ?>
+
 
 
 <div class="mainmenu">
@@ -41,19 +41,21 @@
     <button target="popup" class="boton"><a href="afiliados/nuevo_afiliado.php" 
         onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;">
         <img src='../img/agregar.png' width='32' heigth='32'>
-        AGREGAR AFILIADO
+        AGREGAR 
     </a></button>
+ &nbsp
 
     <button target="popup" class="boton"><a href="#" 
         onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;">
         <img src='../img/modificar.ico' width='32' heigth='32'>
-        MODIFICAR AFILIADO
+        MODIFICAR 
     </a></button>
+ &nbsp
 
     <button target="popup" class="boton"><a href="afiliados/eliminar_afiliado.php" 
-        onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;">
+        onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=450px'); return false;">
         <img src='../img/eliminar.png' width='32' heigth='32'>
-        ELIMINAR AFILIADO
+        ELIMINAR 
     </a></button>
 
 
@@ -61,25 +63,16 @@
 
 </div>
 
-	<?php
-    if (isset($_POST["afiliado"]) && $_POST["afiliado"]!="a")    {
-    $nombre= $_POST["afiliado"];   
-     
-    $consulta = "SELECT * FROM afiliado where nombre='".$nombre."'";
-    }else{
-        
-               $consulta = "SELECT * FROM afiliado";
-    }
-    
-    $resultado = mysqli_query($conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
-    // Motrar el resultado de los registro de la base de datos
-    // Encabezado de la tabla
-	echo "<table width='800' align='center'>";
-	echo"<caption>REGISTRO GENERAL</caption>";
-	echo "<tr>";
-	echo "<th>CODIGO</th>";
-	echo "<th>APELLIDOS</th>";
-	echo "<th>NOMBRES</th>";
+  <?php 
+
+      
+        include('conexion.php'); 
+echo "<table width='800' align='center'>";
+    echo"<caption>REGISTRO GENERAL</caption>";
+    echo "<tr>";
+    echo "<th>CODIGO</th>";
+    echo "<th>APELLIDOS</th>";
+    echo "<th>NOMBRES</th>";
     echo "<th>DNI</th>";
     echo "<th>TIPO DE SANGRE</th>";
     echo "<th>DIRECCION</th>";
@@ -102,72 +95,72 @@
     echo "<th>NOMBRE ESPOSA</th>";
 
 
-	echo "</tr>";
-	$no=1;
-	// Bucle while que recorre cada registro y muestra cada campo en la tabla.
-	while ($columna = mysqli_fetch_array($resultado ))
-	{
-		echo "<tr>";
+    echo "</tr>";
+    $no=1;
+    $query = "select * from afiliado ORDER BY afiliado.id_afiliado ASC";     // Esta linea hace la consulta
+    $result = mysqli_query($conexion,$query); 
 
-		echo "<td>" . $columna['id_afiliado'] . "</td>";
+    while ($registro = mysqli_fetch_array($result)){ 
+        echo "<tr>";
 
-		echo "<td>" . $columna['ape_afiliado'] . "</td>";
+        echo "<td>" . $registro['id_afiliado'] . "</td>";
 
-		echo "<td>" . $columna['nom_afiliado'] . "</td>";
+        echo "<td>" . $registro['ape_afiliado'] . "</td>";
 
-        echo "<td>" . $columna['dni_afiliado'] . "</td>";
+        echo "<td>" . $registro['nom_afiliado'] . "</td>";
 
-        echo "<td>" . $columna['tipo_sangre'] . "</td>";
+        echo "<td>" . $registro['dni_afiliado'] . "</td>";
 
-        echo "<td>" . $columna['direccion'] . "</td>";
+        echo "<td>" . $registro['tipo_sangre'] . "</td>";
 
-        echo "<td>" . $columna['ciudad'] . "</td>";
+        echo "<td>" . $registro['direccion'] . "</td>";
 
-        echo "<td>" . $columna['referencia_ubicacion'] . "</td>";
+        echo "<td>" . $registro['ciudad'] . "</td>";
 
-        echo "<td>" . $columna['departamento'] . "</td>";
+        echo "<td>" . $registro['referencia_ubicacion'] . "</td>";
 
-        echo "<td>" . $columna['provincia'] . "</td>";
+        echo "<td>" . $registro['departamento'] . "</td>";
 
-        echo "<td>" . $columna['distrito'] . "</td>";
+        echo "<td>" . $registro['provincia'] . "</td>";
 
-        echo "<td>" . $columna['fech_nac'] . "</td>";
+        echo "<td>" . $registro['distrito'] . "</td>";
 
-        echo "<td>" . $columna['grado_instruccion'] . "</td>";
+        echo "<td>" . $registro['fech_nac'] . "</td>";
 
-        echo "<td>" . $columna['telefono'] . "</td>";
+        echo "<td>" . $registro['grado_instruccion'] . "</td>";
 
-        echo "<td>" . $columna['e_mail'] . "</td>";
+        echo "<td>" . $registro['telefono'] . "</td>";
 
-        echo "<td>" . $columna['area_trabajo'] . "</td>";
+        echo "<td>" . $registro['e_mail'] . "</td>";
 
-        echo "<td>" . $columna['categoria_o_cargo'] . "</td>";
+        echo "<td>" . $registro['area_trabajo'] . "</td>";
 
-        echo "<td>" . $columna['fech_ingreso_empresa'] . "</td>";
+        echo "<td>" . $registro['categoria_o_cargo'] . "</td>";
 
-        echo "<td>" . $columna['nom_padre'] . "</td>";
+        echo "<td>" . $registro['fech_ingreso_empresa'] . "</td>";
 
-        echo "<td>" . $columna['ape_padre'] . "</td>";
+        echo "<td>" . $registro['nom_padre'] . "</td>";
 
-        echo "<td>" . $columna['nom_madre'] . "</td>";
+        echo "<td>" . $registro['ape_padre'] . "</td>";
 
-        echo "<td>" . $columna['ape_madre'] . "</td>";
+        echo "<td>" . $registro['nom_madre'] . "</td>";
 
-        echo "<td>" . $columna['nom_esposa'] . "</td>";
+        echo "<td>" . $registro['ape_madre'] . "</td>";
+
+        echo "<td>" . $registro['nom_esposa'] . "</td>";
 
 
-		echo "</tr>";
-
-        $no++;
-	}
-	
-	echo "</table>"; // Fin de la tabla
-	// cerrar conexión de base de datos
-	mysqli_close( $conexion );
+        echo "</tr>"; 
+   $no++;
+    }
     
-		
+    echo "</table>"; // Fin de la tabla
+    // cerrar conexión de base de datos
+    mysqli_close( $conexion );
+    
+        
 
-	
+    
 ?>
   
 
