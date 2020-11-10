@@ -52,11 +52,11 @@
     </a></button>
  &nbsp
 
-    <button target="popup" class="boton"><a href="afiliados/eliminar_afiliado.php" 
-        onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=450px'); return false;">
-        <img src='../img/eliminar.png' width='32' heigth='32'>
+    <button class="boton"><a href="afiliados/eliminar_afiliado.php">
+       <img src='../img/eliminar.png' width='32' heigth='32'>
         ELIMINAR 
-    </a></button>
+    </a>
+</button>
 
 
 

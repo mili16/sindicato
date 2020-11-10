@@ -10,7 +10,7 @@
     background-color:#ededed;
          color:#3a8a9e;
    font-family:Verdana;
-    font-size:17px;
+    font-size:14px;
     border-radius:15px;
     border:1px solid #d6bcd6;
     display:inline-block;
@@ -23,7 +23,7 @@
    text-decoration:none;
    color:#3a8a9e;
    font-family:Verdana;
-    font-size:17px;
+    font-size:14px;
 }
 .boton:hover {
     background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);

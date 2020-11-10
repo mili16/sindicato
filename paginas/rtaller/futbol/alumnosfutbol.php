@@ -73,8 +73,7 @@ include("conexion.php");
         MODIFICAR ALUMNO
     </a></button>
  &nbsp
-    <button target="popup" class="boton"><a href="eliminaralumno.php" 
-        onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;">
+    <button  class="boton"><a href="eliminaralumno.php">
         <img src='../../../img/eliminar.png' width='32' heigth='32'>
         ELIMINAR ALUMNO
     </a></button>

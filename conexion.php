@@ -7,9 +7,11 @@
     
     // creación de la conexión a la base de datos con mysql_connect()
     $conexion = new mysqli($host,$usuariodb,$clavedb,$basededatos);
+    // Caractares Especiales
+    $conexion -> set_charset("utf8");
 
     if ($conexion->connect_errno) {
-    	echo "error en la conexion a la bd";
-    	exit();
+        echo "error en la conexion a la bd";
+        exit();
     }
     ?>

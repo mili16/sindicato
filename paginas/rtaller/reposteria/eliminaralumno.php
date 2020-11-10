@@ -1,11 +1,20 @@
+<?php 
+include("../../conexion.php");
+
+$alumnos="SELECT * FROM alumnos WHERE nom_curso = 'reposteria'";
+$queryAlumnos=$conexion->query($alumnos);
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-        <link rel="stylesheet" href="../../../css/style.css">
+        <link rel="stylesheet" href="../../../css/menu.css">
+<link rel="stylesheet" type="text/css" href="../../../css/cursos.css">
         <link rel="stylesheet" href="../../../css/boton.css">
-        <link rel="stylesheet" type="text/css" href="../../../css/icon.css">
-	<title>ELIMINAR ALUMNO</title>
+	<title>ELIMINAR ALUMNOS</title>
 
 	<style>
 		h2{
@@ -33,17 +42,59 @@ text-align:center;
 	</style>
 </head>
 <body>
- <h2>ELIMINAR ALUMNO</h2>
+	<h1>ELIMINAR ALUMNOS</h1>
+    <hr>
+<button class="boton"><a href="alumnosreposteria.php">Volver</a></button>
+		<form action="eliminaralumno.php" method="POST" >
+			
+<table>
+	<tr>
+		<th>id</th>
+		<th>Nombre</th>
+		<th>Apellido</th>
+		<th>Curso</th>
+		<th>Seleccionar</th>
+	</tr>
+	<?php 
 
-	<form class="sign-up" action="eliminaralumno.php" method="post">
+	while($registroAlumno=$queryAlumnos->fetch_array(MYSQLI_BOTH)){
+		echo'<tr>
+				<td>'.$registroAlumno['id_alum'].'</td>
+				<td>'.$registroAlumno['nom_alum'].'</td>
+				<td>'.$registroAlumno['ape_alum'].'</td>
+				<td>'.$registroAlumno['nom_curso'].'</td>
+				<td><input type="checkbox" name="eliminar[]" value="'.$registroAlumno['id_alum'].'"/> </td>
+			</tr>';
+		}
 
-		<input type="text" class="sign-up-input" name="eliminar"  placeholder="INGRESE CODIGO A ELIMINAR" >
+	?>
 
+</table>
 
-		<input type="submit" class="sign-up-input" class="sign-up-button" value="ELIMINAR" name="btn1" required>
-	</form>
+<div id="contenedor">
+<input type="submit" name="borrar" value="Eliminar registros" class="boton"/>
+<button class="boton">Recargar</button>
+</div>
+<?php 
+
+if(isset($_POST['borrar']))
+{ 
+	if (empty($_POST['eliminar'])) 
+	{
+		echo "<div class='error'><span class='icon icon-sad2'></span> No se ha seleccionado ningun Registro</div>";
+	}
+
+	else{
+		foreach ($_POST['eliminar'] as $id_borrar) {
+			$borrarAlumno=$conexion->query("DELETE FROM alumnos where id_alum='$id_borrar'");
+			echo "<div class='correcto'><span class='icon icon-smile'></span> Registros Eliminados </div>";
+		}
+	}
+} 
+?>
 
 </form>
+
 
 
 </body>
@@ -52,19 +103,3 @@ text-align:center;
 
 
 
-<?php
-
-
- //CONSULTA 
-if(isset($_POST['btn1']))
-{	include("conexion.php");
-$id_alum = $_POST['eliminar']; 
-$conexion ->query("delete from alumnos  where id_alum = '".$id_alum."'");
-
-
- echo "<div class='correcto'><span class='icon icon-smile'></span> Alumno eliminado </div>";//MENSAJE DE "ELIMINADO"
- }
- else{ 
- echo "<div class='error'><span class='icon icon-sad2'></span> Alumno no eliminado</div>";//MENSAJE DE NO ELIMINADO
-} 
-?>

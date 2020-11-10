@@ -24,6 +24,9 @@ text-align:center;
 	</style>
 </head>
 <body>
+	<h1>REGISTRAR  AFILIADO</h1>
+    <hr>
+
 	<form class="sign-up" action="nuevo_afiliado.php" method="POST">
 
 		<input type="text" class="sign-up-input" name="id_afiliado"  maxlength="30" placeholder="ID AFILIADO">

@@ -1,8 +1,18 @@
+<?php 
+include("../../conexion.php");
+
+$afiliados="SELECT * FROM afiliado ORDER BY afiliado.ape_afiliado ASC";
+$queryAfiliados=$conexion->query($afiliados);
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/menu.css">
+<link rel="stylesheet" type="text/css" href="../../css/cursos.css">
         <link rel="stylesheet" href="../../css/boton.css">
 	<title>ELIMINAR AFILIADO</title>
 
@@ -32,17 +42,59 @@ text-align:center;
 	</style>
 </head>
 <body>
- <h2>ELIMINAR AFILIADO</h2>
+	<h1>ELIMINAR AFILIADOS</h1>
+    <hr>
+<button class="boton"><a href="../afiliados.php">Volver</a></button>
+		<form action="eliminar_afiliado.php" method="POST" >
+			
+<table>
+	<tr>
+		<th>id</th>
+		<th>Nombre</th>
+		<th>Apellido</th>
+		<th>Dni</th>
+		<th>Seleccionar</th>
+	</tr>
+	<?php 
 
-	<form class="sign-up" action="eliminar_afiliado.php" method="post">
-			<label> Ingrese Id de Afiliado</label>
-		<input type="text" class="sign-up-input" name="eliminar" >
+	while($registroAfiliado=$queryAfiliados->fetch_array(MYSQLI_BOTH)){
+		echo'<tr>
+				<td>'.$registroAfiliado['id_afiliado'].'</td>
+				<td>'.$registroAfiliado['nom_afiliado'].'</td>
+				<td>'.$registroAfiliado['ape_afiliado'].'</td>
+				<td>'.$registroAfiliado['dni_afiliado'].'</td>
+				<td><input type="checkbox" name="eliminar[]" value="'.$registroAfiliado['id_afiliado'].'"/> </td>
+			</tr>';
+		}
 
+	?>
 
-		<input type="submit" class="sign-up-input" class="sign-up-button" value="ELIMINAR" name="btn1" required>
-	</form>
+</table>
+
+<div id="contenedor">
+<input type="submit" name="borrar" value="Eliminar registros" class="boton"/>
+<button class="boton">Recargar</button>
+</div>
+<?php 
+
+if(isset($_POST['borrar']))
+{ 
+	if (empty($_POST['eliminar'])) 
+	{
+		echo "<div class='error'><span class='icon icon-sad2'></span> No se ha seleccionado ningun Registro</div>";
+	}
+
+	else{
+		foreach ($_POST['eliminar'] as $id_borrar) {
+			$borrarAfiliado=$conexion->query("DELETE FROM afiliado where id_afiliado='$id_borrar'");
+			echo "<div class='correcto'><span class='icon icon-smile'></span> Registros Eliminados </div>";
+		}
+	}
+} 
+?>
 
 </form>
+
 
 
 </body>
@@ -51,19 +103,3 @@ text-align:center;
 
 
 
-<?php
-
-
- //CONSULTA 
-if(isset($_POST['btn1']))
-{	include("../conexion.php");
-$id_afiliado = $_POST['eliminar']; 
-$conexion ->query("delete from afiliado  where id_afiliado = '".$id_afiliado."'");
-
-
- echo "<div class='correcto'><span class='icon icon-smile'></span> Afiliado eliminado </div>";//MENSAJE DE "ELIMINADO"
- }
- else{ 
- echo "<div class='error'><span class='icon icon-sad2'></span> Afiliado no eliminado</div>";//MENSAJE DE NO ELIMINADO
-} 
-?>
