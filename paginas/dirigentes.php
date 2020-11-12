@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="../css/cursos.css">
 <link rel="stylesheet" href="../css/menu.css">
 
-<title>DIRECTIVA 2019</title>
+<title>DIRIGENTES</title>
 
 </head>
 
@@ -15,7 +15,7 @@
 	
     <?php
 // Datos de la base de datos
- include("conexion.php");
+ include("../conexion.php");
   ?>
 
 <!-- NAV -->
@@ -49,14 +49,12 @@
  &nbsp
 
 
-    <button target="popup" class="boton"><a href="dirigentes/form_modificar_dirigente.php" 
-        onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;">
+    <button class="boton"><a href="dirigentes/form_modificar_dirigente.php">
         <img src='../img/modificar.ico' width='32' heigth='32'>
         MODIFICAR
     </a></button>
  &nbsp
-    <button target="popup" class="boton"><a href="dirigentes/form_eliminar_dirigente.php" 
-        onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;">
+    <button class="boton"><a href="dirigentes/form_eliminar_dirigente.php">
         <img src='../img/eliminar.png' width='32' heigth='32'>
         ELIMINAR 
     </a></button>
@@ -112,8 +110,8 @@
 	echo"<caption>SITRACOND</caption>";
 	echo "<tr>";
 	echo "<th>CODIGO</th>";
+    echo "<th>APELLIDO</th>";
 	echo "<th>NOMBRE</th>";
-	echo "<th>APELLIDO</th>";
     echo "<th>DNI</th>";
     echo "<th>CARGO</th>";
     echo "<th>CELULAR</th>";
@@ -125,8 +123,8 @@
 	{
 		echo "<tr>";
 		echo "<td>" . $columna['id_dirigente'] . "</td>";
-		echo "<td>" . $columna['nom_dirigente'] . "</td>";
 		echo "<td>" . $columna['ape_dirigente'] . "</td>";
+        echo "<td>" . $columna['nom_dirigente'] . "</td>";
         echo "<td>" . $columna['dni_dirigente'] . "</td>";
         echo "<td>" . $columna['cargo_dirigente'] . "</td>";
         echo "<td>" . $columna['cel_dirigente'] . "</td>";

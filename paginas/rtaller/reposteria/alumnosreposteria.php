@@ -28,7 +28,7 @@ open('#','','top=300,left=300,width=300,height=300') ;
     
 <?php
 // Datos de la base de datos
-include("conexion.php")
+include("../../../conexion.php");
 ?>
 
 
@@ -55,9 +55,8 @@ include("conexion.php")
 
 
 <div id="contenedor">
-       <button target="popup" class="boton"><a href="../registro.html">
-        <img src='../../../img/volver.png' width='35' heigth='42'>
-        
+       <button  class="boton"><a href="../registro.html">
+        VOLVER
     </a></button>
 &nbsp
     <button target="popup" class="boton"><a href="nuevoalumno.php" 
@@ -134,34 +133,36 @@ include("conexion.php")
     echo "<th>DNI ALUMNO</th>";
     echo "<th>FAMILIAR</th>";
     echo "<th>CELULAR</th>";
+    echo "<th>REGISTRO</th>";
     echo "<th>TALLER</th>";
 
-	echo "</tr>";
-	$no=1;
-	// Bucle while que recorre cada registro y muestra cada campo en la tabla.
-	while ($columna = mysqli_fetch_array( $resultado ))
-	{
-		echo "<tr>";
-		echo "<td>" . $columna['id_alum'] . "</td>";
-		echo "<td>" . $columna['ape_afiliado'] . "</td>";
-		echo "<td>" . $columna['nom_afiliado'] . "</td>";
+    echo "</tr>";
+    $no=1;
+    // Bucle while que recorre cada registro y muestra cada campo en la tabla.
+    while ($columna = mysqli_fetch_array( $resultado ))
+    {
+        echo "<tr>";
+        echo "<td>" . $columna['id_alum'] . "</td>";
+        echo "<td>" . $columna['ape_afiliado'] . "</td>";
+        echo "<td>" . $columna['nom_afiliado'] . "</td>";
         echo "<td>" . $columna['nom_alum'] . "</td>";
         echo "<td>" . $columna['ape_alum'] . "</td>";
         echo "<td>" . $columna['dni_alum'] . "</td>";
         echo "<td>" . $columna['familiar_alum'] . "</td>";
         echo "<td>" . $columna['cel_alum'] . "</td>";
+        echo "<td>" . $columna['fech_registro'] . "</td>";
         echo "<td>" . $columna['nom_curso'] . "</td>";
-		echo "</tr>";
+        echo "</tr>";
         $no++;
-	}
-	
-	echo "</table>"; // Fin de la tabla
-	// cerrar conexión de base de datos
-	mysqli_close( $conexion );
+    }
     
-		
+    echo "</table>"; // Fin de la tabla
+    // cerrar conexión de base de datos
+    mysqli_close( $conexion );
+    
+        
 
-	
+    
 ?>
    
    

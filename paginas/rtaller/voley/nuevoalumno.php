@@ -41,6 +41,8 @@ text-align:center;
 
 		<input type="number" class="sign-up-input" name="cel_alum" placeholder="CELULAR ALUMNO">
 
+		<input type="text" class="sign-up-input" name="fech_registro" placeholder="REGISTRO">
+
 		<select name="nom_curso"> SELECCIONA 
                 <option value="VOLEY" >VOLEY</option>
         </select>
@@ -55,7 +57,7 @@ text-align:center;
 <?php 
 if(isset($_POST['btn1']))
 {
-	include ("conexion.php");
+	include ("../../../conexion.php");
 
 
 $ape_afiliado = $_POST['ape_afiliado'];
@@ -65,6 +67,7 @@ $ape_alum = $_POST['ape_alum'];
 $dni_alum = $_POST['dni_alum'];
 $familiar_alum = $_POST['familiar_alum'];
 $cel_alum = $_POST['cel_alum'];
+$fech_registro = $_POST['fech_registro'];
 $nom_curso = $_POST['nom_curso'];
 
 // echo $nombre. " ".$apellido. "".$profesor;
@@ -74,11 +77,11 @@ $conexion ->query("INSERT INTO alumnos (ape_afiliado,
 									ape_alum,
 									dni_alum,
 									familiar_alum,
-									cel_alum,
+									cel_alum,fech_registro,
 									nom_curso) 
 				VALUES ('$ape_afiliado',
 				'$nom_afiliado','$nom_alum','$ape_alum',
-				'$dni_alum','$familiar_alum','$cel_alum',
+				'$dni_alum','$familiar_alum','$cel_alum','$fech_registro',
 				'$nom_curso')");
 	
 	echo "<div class='correcto'><span class='icon icon-smile'></span> 
@@ -88,9 +91,9 @@ else
 {
 	
 
-	echo "<div class='error'><span class='icon icon-sad2'></span> 
+	echo "<div class='error'>
 							Error:  Completar todos los datos </div>";
-							include("cerrarbd.php");
+							
 }
 ?>
 

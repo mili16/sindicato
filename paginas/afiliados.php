@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="../css/boton.css">
 
     <title>AFILIADOS</title>
+    <style>
+        tr th{
+            position: sticky;
+        }
+    </style>
 </head>
 
 
@@ -45,9 +50,7 @@
     </a></button>
  &nbsp
 
-    <button target="popup" class="boton"><a href="#" 
-        onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;">
-        <img src='../img/modificar.ico' width='32' heigth='32'>
+    <button class="boton"><a href="afiliados/modificar_afiliado.php"> <img src='../img/modificar.ico' width='32' heigth='32'>
         MODIFICAR 
     </a></button>
  &nbsp

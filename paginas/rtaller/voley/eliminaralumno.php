@@ -1,5 +1,5 @@
 <?php 
-include("../../conexion.php");
+include("../../../conexion.php");
 
 $alumnos="SELECT * FROM alumnos WHERE nom_curso = 'voley'";
 $queryAlumnos=$conexion->query($alumnos);
@@ -81,13 +81,13 @@ if(isset($_POST['borrar']))
 { 
 	if (empty($_POST['eliminar'])) 
 	{
-		echo "<div class='error'><span class='icon icon-sad2'></span> No se ha seleccionado ningun Registro</div>";
+		echo "<div class='error'> No se ha seleccionado ningun Registro</div>";
 	}
 
 	else{
 		foreach ($_POST['eliminar'] as $id_borrar) {
 			$borrarAlumno=$conexion->query("DELETE FROM alumnos where id_alum='$id_borrar'");
-			echo "<div class='correcto'><span class='icon icon-smile'></span> Registros Eliminados </div>";
+			echo "<div class='correcto'> Registros Eliminados </div>";
 		}
 	}
 } 

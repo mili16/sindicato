@@ -1,5 +1,5 @@
 <?php 
-include("../../conexion.php");
+include("../../../conexion.php");
 
 $alumnos="SELECT * FROM alumnos WHERE nom_curso = 'futbol'";
 $queryAlumnos=$conexion->query($alumnos);
@@ -81,7 +81,7 @@ if(isset($_POST['borrar']))
 { 
 	if (empty($_POST['eliminar'])) 
 	{
-		echo "<div class='error'><span class='icon icon-sad2'></span> No se ha seleccionado ningun Registro</div>";
+		echo "<div class='error'>No se ha seleccionado ningun Registro</div>";
 	}
 
 	else{

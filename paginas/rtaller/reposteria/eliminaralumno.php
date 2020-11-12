@@ -1,5 +1,5 @@
 <?php 
-include("../../conexion.php");
+include("../../../conexion.php");
 
 $alumnos="SELECT * FROM alumnos WHERE nom_curso = 'reposteria'";
 $queryAlumnos=$conexion->query($alumnos);

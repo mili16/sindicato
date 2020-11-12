@@ -29,7 +29,6 @@ text-align:center;
 
 	<form class="sign-up" action="nuevo_afiliado.php" method="POST">
 
-		<input type="text" class="sign-up-input" name="id_afiliado"  maxlength="30" placeholder="ID AFILIADO">
 
 		<input type="text" class="sign-up-input" name="ape_afiliado"  maxlength="30" placeholder="APELLIDOS">
 
@@ -90,9 +89,8 @@ text-align:center;
 <?php 
 if(isset($_POST['btn1']))
 {
-	include ("../conexion.php");
+	include ("../../conexion.php");
 
-	$id_afiliado = $_POST['id_afiliado'];
 	$ape_afiliado = $_POST['ape_afiliado'];
 	$nom_afiliado = $_POST['nom_afiliado'];
 	$dni_afiliado=$_POST['dni_afiliado'];
@@ -117,11 +115,11 @@ if(isset($_POST['btn1']))
 	$nom_esposa=$_POST['nom_esposa'];
 
 // echo $nombre. " ".$apellido. "".$profesor;
-	$conexion ->query("INSERT INTO afiliado (id_afiliado,ape_afiliado,nom_afiliado,dni_afiliado,
+	$conexion ->query("INSERT INTO afiliado (ape_afiliado,nom_afiliado,dni_afiliado,
 		tipo_sangre,direccion,ciudad,referencia_ubicacion,departamento,provincia,distrito,fech_nac,
 		grado_instruccion,telefono,e_mail,area_trabajo,categoria_o_cargo,fech_ingreso_empresa,nom_padre,ape_padre,
 		nom_madre,ape_madre,nom_esposa)
-		VALUES ('$id_afiliado','$ape_afiliado','$nom_afiliado','$dni_afiliado',
+		VALUES ('$ape_afiliado','$nom_afiliado','$dni_afiliado',
 		'$tipo_sangre','$direccion','$ciudad','$referencia_ubicacion','$departamento','$provincia','$distrito','$fech_nac',
 		'$grado_instruccion','$telefono','$e_mail','$area_trabajo','$categoria_o_cargo','$fech_ingreso_empresa',
 		'$nom_padre','$ape_padre',

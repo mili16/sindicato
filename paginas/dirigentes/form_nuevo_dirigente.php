@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="../css/boton.css">
+        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/boton.css">
 	<title>NUEVO DIRIGENTE</title>
 </head>
 <body>
 	<form class="sign-up" action="form_nuevo_dirigente.php" method="post">
 
-		<input type="text" class="sign-up-input" name="nom_dirigente" placeholder="INGRESAR NOMBRE">
+		<input type="text" class="sign-up-input" name="nom_dirigente" maxlength="30" placeholder="INGRESAR NOMBRE">
 
-		<input type="text" class="sign-up-input" name="ape_dirigente" placeholder="INGRESAR PELLIDO">
+		<input type="text" class="sign-up-input" name="ape_dirigente" maxlength="30" placeholder="INGRESAR PELLIDO">
 
-		<input type="text" class="sign-up-input" name="dni_dirigente" placeholder="INGRESE DNI">
+		<input type="number" class="sign-up-input" name="dni_dirigente" maxlength="8" placeholder="INGRESE DNI">
 
 		<input type="text" class="sign-up-input" name="cargo_dirigente" placeholder="INGRESE CARGO">
 
-		<input type="text" class="sign-up-input" name="cel_dirigente" placeholder="INGRESE CELULAR">
+		<input type="number" class="sign-up-input" name="cel_dirigente" maxlength="9" placeholder="INGRESE CELULAR">
 
 		<input type="submit"   class="sign-up-input" class="sign-up-button" value="REGISTRAR" name="btn1" required> </a>
 	</form>

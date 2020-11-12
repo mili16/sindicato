@@ -25,7 +25,7 @@ open('#','','top=300,left=300,width=300,height=300') ;
 
 
     <?php
-include("conexion.php");
+include("../../../conexion.php");
     ?>
     
 
@@ -54,7 +54,7 @@ include("conexion.php");
 
 <div id="contenedor">
        <button target="popup" class="boton"><a href="../registro.html">
-        <img src='../../../img/volver.png' width='35' heigth='42'>
+        VOLVER
         
     </a></button>
 &nbsp
@@ -67,9 +67,7 @@ include("conexion.php");
  &nbsp
 
 
-    <button target="popup" class="boton"><a href="modificaralumno.php" 
-        onClick="window.open(this.href, this.target, 'toolbar=0 , location=1 , status=0 , menubar=1 , scrollbars=0 , resizable=1 ,left=150pt,top=150pt,width=600px,height=600px'); return false;">
-        <img src='../../../img/modificar.ico' width='32' heigth='32'>
+    <button  class="boton"><a href="modificaralumno.php"> <img src='../../../img/modificar.ico' width='32' heigth='32'>
         MODIFICAR ALUMNO
     </a></button>
  &nbsp
@@ -95,7 +93,7 @@ include("conexion.php");
 <!-- casilla -->
 
         <select name="alumnos" >
-        <option value="a"  >--Mostrar Alumno--</option>
+        <option value="a"  >Buscar por Apellido</option>
        <?php
         while ($row = mysqli_fetch_array($resultado))
     {
@@ -133,6 +131,7 @@ include("conexion.php");
     echo "<th>DNI ALUMNO</th>";
     echo "<th>FAMILIAR</th>";
     echo "<th>CELULAR</th>";
+    echo "<th>REGISTRO</th>";
     echo "<th>TALLER</th>";
 
 	echo "</tr>";
@@ -149,6 +148,7 @@ include("conexion.php");
         echo "<td>" . $columna['dni_alum'] . "</td>";
         echo "<td>" . $columna['familiar_alum'] . "</td>";
         echo "<td>" . $columna['cel_alum'] . "</td>";
+        echo "<td>" . $columna['fech_registro'] . "</td>";
         echo "<td>" . $columna['nom_curso'] . "</td>";
 		echo "</tr>";
         $no++;
