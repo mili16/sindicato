@@ -1,0 +1,24 @@
+.contenedor {
+
+  border: solid 1px black;
+  margin: 30px;
+}
+
+h1,
+h2 {
+  text-align: center;  
+}
+
+.cajas {
+  border: solid 1px blue;
+  margin: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.caja {
+  background-color: red;
+  margin: calc(7% - 50px);
+  height: 220px;
+  width: 220px;
+}

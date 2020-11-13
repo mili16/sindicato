@@ -14,6 +14,7 @@ function Header()
     $this->Cell(107);
     // Título
     $this->Cell(70,10,'Reporte General Talleres',0,0,'C');
+   
     // Salto de línea
     $this->Ln(20);
     $this->Cell(45, 8, 'Apellidos Afiliado', 1, 0, 'C', 0);
@@ -44,7 +45,7 @@ require '../../conexion.php';
 $consulta="SELECT * FROM alumnos ORDER BY alumnos.fech_registro ASC";
 $resultado=$conexion->query($consulta);
 
-$pdf = new PDF();
+$pdf = new PDF('L','mm','A4');  
 $pdf->AliasNbPages();
 $pdf->AddPage();
 $pdf->SetFont('Arial','',8.5);

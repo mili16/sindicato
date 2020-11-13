@@ -5,15 +5,17 @@ class PDF extends FPDF
 {
     
 // Cabecera de página
-function Header()
+function Header ()
 {
    // Arial bold 15
+
     $this->SetFont('times','B',13);
 
     // Movernos a la derecha
     $this->Cell(60);
     // Título
     $this->Cell(70,10,'Asamblea - Asistencia de Afiliados',0,0,'C');
+
     // Salto de línea
     $this->Ln(20);
     $this->Cell(60, 8, 'Apellidos', 1, 0, 'C', 0);

@@ -43,7 +43,7 @@ require '../../conexion.php';
 $consulta="SELECT * FROM afiliado ORDER BY afiliado.ape_afiliado ASC";
 $resultado=$conexion->query($consulta);
 
-$pdf = new PDF();
+$pdf = new PDF('L','mm','A4');
 $pdf->AliasNbPages();
 $pdf->AddPage();
 $pdf->SetFont('Arial','',9);
