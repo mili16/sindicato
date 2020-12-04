@@ -93,6 +93,10 @@ echo "
             <th>CODIGO</th>
             <th>NOMBRE</th>
             <th>APELLIDO</th>
+            <th>DNI</th>
+            <th>DIRECCION</th>
+            <th>TELEFONO</th>
+            <th>E-MAIL</th>
             </tr>";
 $existe=1;
         while ($consulta = mysqli_fetch_array($resultados))
@@ -103,7 +107,11 @@ $existe=1;
             <tr> 
             <td>".$consulta['id_afiliado']."</td> 
             <td>".$consulta['nom_afiliado']."</td>  
-            <td>".$consulta['ape_afiliado']."</td>
+            <td>".$consulta['ape_afiliado']."</td> 
+            <td>".$consulta['dni_afiliado']."</td> 
+            <td>".$consulta['direccion']."</td> 
+            <td>".$consulta['telefono']."</td> 
+            <td>".$consulta['e_mail']."</td>
             </tr>
              </tr>";
        
@@ -135,7 +143,7 @@ if(isset($_POST['buscar_area']))
             <table width='800' align='center'>
             <caption>Area</caption>
             <tr>
-            <th>CODIGO</th><th>NOMBRE</th><th>APELLIDO</th><th>AREA</th><th>CAT. O CARGO</th>
+            <th>CODIGO</th><th>NOMBRE</th><th>APELLIDO</th><th>AREA</th><th>CAT. O CARGO</th><th>Ingreso a CMC</th>
             </tr>
             <tr>";
            
@@ -148,6 +156,7 @@ if(isset($_POST['buscar_area']))
             <td>".$consulta['ape_afiliado']."</td> 
             <td>".$consulta['area_trabajo']."</td>
             <td>".$consulta['categoria_o_cargo']."</td>
+            <td>".$consulta['fech_ingreso_empresa']."</td>
             </tr>";
        
 
