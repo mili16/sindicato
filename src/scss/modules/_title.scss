@@ -1,0 +1,7 @@
+.title {
+  font-size: calculate-rem(32px);
+  margin-top: calculate-rem(32px);
+  @extend %text-center;
+  width: 100%;
+  font-weight: bold;
+}

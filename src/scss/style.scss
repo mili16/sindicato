@@ -1,13 +1,10 @@
 @charset 'utf-8';
 @import './config';
-// @import './base/normalize';
-@import './base/base';
-@import './layout/header';
-@import './layout/footer';
-@import './layout/main';
-@import './layout/container';
-@import './modules/modules';
-@import './modules/menu';
-@import './modules/button';
-@import './modules/card';
-@import './modules/login';
+
+@import 'base/base';
+@import 'layout/l-container';
+@import 'modules/login';
+@import 'modules/title';
+@import 'modules/content';
+@import 'modules/menu';
+@import 'modules/buttons';

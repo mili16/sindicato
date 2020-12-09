@@ -31,45 +31,54 @@ if (!isset($_SESSION['userid']) && !isset($_SESSION['user'])) {
         }
     }
 ?>
+<main>
 
-<div class="login-container">
-    <h1 class="title"><?= APP['name'] ?></h1>
-    <img class="logo-img" src="">
-    <!-- <hr> -->
-    <form action="" method="post" class="login">
-        <div class="login-content">
-            <img
-                src="/img/usuario.png"
-                alt="Logo login"
-                class="logo-img"
-            >
+    <div class="login-container">
+        <div class="login">
+            <h1 class="title"><?= APP['name'] ?></h1>
+            <!-- <img class="logo-img" src=""> -->
+            <!-- <img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png" alt="user image"> -->
+            <!-- <hr> -->
+            <form action="" method="post" class="login-form">
+                <div class="login-content">
+                    <img
+                        src="/img/usuario.png"
+                        alt="Logo login"
+                        class="login-img"
+                    >
+                </div>
+                <div class="login-content">
+                    <input
+                        name="user"
+                        type="text"
+                        placeholder="USUARIO"
+                        class="login-input"
+                        autofocus
+                    >
+                </div>
+                <div class="login-content">
+                    <input
+                        name="password"
+                        type="password"
+                        placeholder="CONTRASEÑA"
+                        class="login-input"
+                    >
+                </div>
+                <div class="login-content">
+                    <!-- <button type="submit" class="boton login-button">
+                        Login
+                    </button> -->
+                    <input
+                        name="login"
+                        type="submit"
+                        value="login"
+                        class="login-button"
+                    >
+                </div>
+            </form>
         </div>
-        <div class="login-content">
-            <input
-                name="user"
-                type="text"
-                placeholder="USUARIO"
-                class="login-input"
-            >
-        </div>
-        <div class="login-content">
-            <input
-                name="password"
-                type="password"
-                placeholder="CONTRASEÑA"
-                class="login-input"
-            >
-        </div>
-        <div class="login-content">
-            <input class="boton"
-                name="login"
-                type="submit"
-                value="login"
-                class="login-button"
-            >
-        </div>
-    </form>
-</div>
+    </div>
+</main>
 
 <?php
 } else {

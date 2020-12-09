@@ -1,0 +1,53 @@
+.menu {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 100%;
+  // background: #222;
+}
+
+.menu-item {
+  background: $primary-color;
+  border-bottom: 1px solid #aaa;
+}
+
+.menu-item:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.menu-link {
+  text-decoration: none;
+  color: #ddd;
+  display: block;
+  padding: 0.5em 1em;
+  text-align: center;
+}
+
+@media screen and (min-width: 640px) {
+  .menu {
+    display: flex;
+  }
+  .menu-item {
+    flex: 1;
+    border-right: 1px solid #aaa;
+    border-bottom: none;
+  }
+  .menu-item:last-child {
+    border-right: none;
+  }
+  .menu-item:hover > .menu {
+    display: block;
+    z-index: 100;
+    background: $third-color;
+  }
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-item > .menu {
+  position: absolute;
+  display: none;
+}

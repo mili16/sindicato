@@ -1,0 +1,30 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include from(small) {
+    height: 100vh;
+  }
+  // background: lighten($primary-color, .5);
+}
+
+// .title {
+//   color: #ddd;
+//   font-size: 32px;
+//   font-weight: bold;
+// }
+
+.text {
+  color: #444;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.button {
+  color: #ddd;
+  background: #000;
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: none;
+}

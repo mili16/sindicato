@@ -14,9 +14,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?= ucfirst($pageTitle) . ' | ' . APP['name'] ?></title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+
+<div class="container">
 
 <?php
 
@@ -37,5 +41,6 @@
     }
 
     require_once __DIR__ . '/../views/include/login.php';
-
 ?>
+
+</div>

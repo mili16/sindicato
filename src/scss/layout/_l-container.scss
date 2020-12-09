@@ -1,0 +1,49 @@
+%l-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $max-width;
+  width: 90%;
+}
+
+%text-center {
+  text-align: center;
+}
+
+%margin-top {
+  margin-top: calculate-rem(24px);
+}
+
+%horizontal-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%margin-bottom {
+  margin-bottom: calculate-rem(24px);
+}
+
+.header {
+  background: $primary-color;
+  width: 100%;
+  // padding: 1.2em;
+  @extend %text-center;
+}
+
+.footer {
+  background: $third-color;
+  width: 100%;
+  padding: 2em;
+  color: #ddd;
+  @extend %text-center;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}

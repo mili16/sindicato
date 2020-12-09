@@ -1,5 +1,7 @@
 <?php
 
+// include __DIR__ . '/../../enviro.php';
+
 define('ROOT', __DIR__ . '/../');
 
 
